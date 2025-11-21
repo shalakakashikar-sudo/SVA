@@ -2,10 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/SVA/',     // 👈 IMPORTANT for GitHub Pages
   plugins: [react()],
-  base: '/SVA/', // ✅ Changed to match your actual repo name
-  server: {
-    port: 3000,
-    open: true
-  }
 })
