@@ -4,12 +4,20 @@ on:
   push:
     branches: [ main ]
 
+# Give the workflow the permissions it needs to push to the repo and publish pages
+permissions:
+  contents: write   # allow commits / pushes
+  pages: write      # allow GitHub Pages publishing
+  id-token: write   # sometimes useful for OIDC flows (optional)
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ensure full history so actions that create commits/tags work reliably
 
       - name: Setup Node
         uses: actions/setup-node@v4
