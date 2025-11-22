@@ -4,11 +4,10 @@ on:
   push:
     branches: [ main ]
 
-# Give the workflow the permissions it needs to push to the repo and publish pages
 permissions:
-  contents: write   # allow commits / pushes
-  pages: write      # allow GitHub Pages publishing
-  id-token: write   # sometimes useful for OIDC flows (optional)
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -17,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # ensure full history so actions that create commits/tags work reliably
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -33,6 +32,7 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # use the PAT stored in repository secrets
+          access_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
