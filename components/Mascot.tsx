@@ -4,19 +4,19 @@ type Outcome = "correct" | "wrong" | null;
 
 interface MascotProps {
   expression?: "happy" | "thinking" | "excited" | "sad" | "tickled";
-  outcome?: Outcome; // parent can set this to trigger celebrate / cry
+  outcome?: Outcome;             // new-style programmatic trigger
+  isCelebrating?: boolean;       // old-style boolean trigger (kept for compatibility)
 }
 
-const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null }) => {
+const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, isCelebrating = false }) => {
   const [isTickled, setIsTickled] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [currentExpression, setCurrentExpression] = useState(expression);
   const [isCrying, setIsCrying] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
-  // preload audio pointing to files you uploaded in public/sounds/
+  // audio preload
   const audio = useRef<{ correct?: HTMLAudioElement; wrong?: HTMLAudioElement; tickle?: HTMLAudioElement }>({});
-
   useEffect(() => {
     if (!audio.current.correct) {
       const base = "/sounds";
@@ -37,19 +37,17 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
     if (!a) return;
     try {
       a.currentTime = 0;
-      const p = a.play();
-      if (p && typeof p.catch === "function") p.catch(() => {});
-    } catch {
-      // swallow autoplay errors
-    }
+      a.play().catch(() => {});
+    } catch {}
   };
 
-  // inject scoped CSS (only once)
+  // CSS (scoped) — original visuals + animations
   useEffect(() => {
-    if (document.getElementById("mascot-restored-styles")) return;
-    const css = `
-      .mascot-restored { display:inline-block; cursor:pointer; will-change: transform; }
-      /* celebrate: 360 deg spin + little dance — 1s total */
+    if (document.getElementById("mascot-merged-styles")) return;
+    const style = document.createElement("style");
+    style.id = "mascot-merged-styles";
+    style.innerHTML = `
+      .mascot-merged { display:inline-block; cursor:pointer; will-change: transform; }
       .mascot-celebrate { animation: mascot-celebrate 1000ms cubic-bezier(.22,.9,.35,1) both; }
       @keyframes mascot-celebrate {
         0% { transform: translateY(0) rotate(0deg) scale(1); }
@@ -57,8 +55,6 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
         60% { transform: translateY(-6px) rotate(300deg) scale(0.98); }
         100% { transform: translateY(0) rotate(360deg) scale(1); }
       }
-
-      /* tickle quick wobble */
       .mascot-tickle { animation: mascot-tickle 400ms ease-in-out both; }
       @keyframes mascot-tickle {
         0%,100% { transform: rotate(0deg); }
@@ -67,34 +63,38 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
         60% { transform: rotate(-5deg) translateX(-2px); }
         80% { transform: rotate(6deg) translateX(2px); }
       }
-
-      /* crying bob */
       .mascot-cry { animation: mascot-cry 1000ms ease-in-out both; }
       @keyframes mascot-cry { 0% { transform: translateY(0);} 50% { transform: translateY(4px);} 100% { transform: translateY(0);} }
-
-      /* tear drop */
       .mascot-tear { animation: tear-fall 800ms linear forwards; transform-origin: center top; }
       @keyframes tear-fall { 0% { opacity: 1; transform: translateY(0) scaleY(1);} 100% { opacity: 0; transform: translateY(18px) scaleY(1.1);} }
-
       .mascot-blush { transition: r 0.18s ease-in-out; }
-
-      /* little hover to invite tickle */
-      .mascot-restored:focus, .mascot-restored:hover { transform: scale(1.03); transition: transform 140ms ease; }
+      .mascot-merged:focus, .mascot-merged:hover { transform: scale(1.03); transition: transform 140ms ease; }
     `;
-    const style = document.createElement("style");
-    style.id = "mascot-restored-styles";
-    style.innerHTML = css;
     document.head.appendChild(style);
   }, []);
 
-  // respond to outcome prop
+  // react when parent toggles either outcome OR isCelebrating
   useEffect(() => {
-    if (!outcome) return;
     if (isAnimating) return;
-    if (outcome === "correct") triggerCorrect();
-    else if (outcome === "wrong") triggerWrong();
+    if (outcome === "correct") {
+      triggerCorrect();
+      return;
+    }
+    if (outcome === "wrong") {
+      triggerWrong();
+      return;
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [outcome]);
+
+  useEffect(() => {
+    // if parent flips isCelebrating true (old behavior), treat as correct celebration
+    if (isAnimating) return;
+    if (isCelebrating) {
+      triggerCorrect();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isCelebrating]);
 
   const triggerCorrect = () => {
     setIsAnimating(true);
@@ -145,17 +145,14 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
     }, 400);
   };
 
-  // restore original-looking face shapes and details
+  // face shapes (kept original look)
   const expressions: Record<string, React.ReactNode> = {
     happy: (
       <>
-        {/* Eyes */}
         <ellipse cx="18" cy="24" rx="2.5" ry="4.5" fill="black" />
         <ellipse cx="32" cy="24" rx="2.5" ry="4.5" fill="black" />
-        {/* Eye highlights */}
         <circle cx="19" cy="22" r="1" fill="white" />
         <circle cx="33" cy="22" r="1" fill="white" />
-        {/* Mouth smile */}
         <path d="M 21 34 C 23 37, 27 37, 29 34" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
       </>
     ),
@@ -206,7 +203,7 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
   return (
     <div
       ref={wrapperRef}
-      className="mascot-restored"
+      className="mascot-merged"
       onClick={handleTickle}
       title="Tickle me!"
       role="button"
@@ -221,20 +218,20 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
     >
       <svg width="112" height="112" viewBox="0 0 50 50" className="drop-shadow-lg" xmlns="http://www.w3.org/2000/svg" aria-hidden="false">
         <defs>
-          <linearGradient id="mascotGradientRestored" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient id="mascotGradientMerged" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style={{ stopColor: "#a855f7", stopOpacity: 1 }} />
             <stop offset="100%" style={{ stopColor: "#ec4899", stopOpacity: 1 }} />
           </linearGradient>
-          <filter id="blushFilter">
+          <filter id="blushFilterMerged">
             <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
           </filter>
         </defs>
 
         {/* Body & Hands */}
         <g>
-          <path d={bodyPath} fill="url(#mascotGradientRestored)" />
-          <path d="M 4,30 C 0,31 0,36 4,37" fill="url(#mascotGradientRestored)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
-          <path d="M 46,30 C 50,31 50,36 46,37" fill="url(#mascotGradientRestored)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
+          <path d={bodyPath} fill="url(#mascotGradientMerged)" />
+          <path d="M 4,30 C 0,31 0,36 4,37" fill="url(#mascotGradientMerged)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
+          <path d="M 46,30 C 50,31 50,36 46,37" fill="url(#mascotGradientMerged)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
         </g>
 
         {/* Inner sheen */}
@@ -242,14 +239,11 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null })
 
         {/* Face group */}
         <g className="transition-opacity duration-300" transform="translate(0,0)">
-          {/* Blush */}
-          <circle cx="13" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilter)" />
-          <circle cx="37" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilter)" />
+          <circle cx="13" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilterMerged)" />
+          <circle cx="37" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilterMerged)" />
 
-          {/* Face elements */}
           {expressions[currentExpression]}
 
-          {/* Tears */}
           {tears}
         </g>
       </svg>
