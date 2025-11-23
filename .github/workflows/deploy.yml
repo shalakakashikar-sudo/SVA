@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install deps (use npm install so workflow works without exact lockfile)
+      - name: Install deps (use npm install so workflow works without lockfile sync)
         run: npm install
 
       - name: Build
