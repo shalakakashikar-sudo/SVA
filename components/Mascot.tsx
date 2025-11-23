@@ -1,11 +1,12 @@
+// components/Mascot.tsx
 import React, { useEffect, useRef, useState } from "react";
 
 type Outcome = "correct" | "wrong" | null;
 
 interface MascotProps {
   expression?: "happy" | "thinking" | "excited" | "sad" | "tickled";
-  outcome?: Outcome;             // new-style programmatic trigger
-  isCelebrating?: boolean;       // old-style boolean trigger (kept for compatibility)
+  outcome?: Outcome;
+  isCelebrating?: boolean;
 }
 
 const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, isCelebrating = false }) => {
@@ -15,21 +16,59 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, i
   const [isCrying, setIsCrying] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
 
-  // audio preload
+  // audio refs
   const audio = useRef<{ correct?: HTMLAudioElement; wrong?: HTMLAudioElement; tickle?: HTMLAudioElement }>({});
+  const unlocked = useRef(false);
+
+  // preload but don't assume unlocked
   useEffect(() => {
-    if (!audio.current.correct) {
-      const base = "/sounds";
-      audio.current.correct = new Audio(`${base}/correct.wav`);
-      audio.current.wrong = new Audio(`${base}/wrong.wav`);
-      audio.current.tickle = new Audio(`${base}/tickle.wav`);
+    const base = "/sounds";
+    audio.current.correct = new Audio(`${base}/correct.wav`);
+    audio.current.wrong = new Audio(`${base}/wrong.wav`);
+    audio.current.tickle = new Audio(`${base}/tickle.wav`);
+    Object.values(audio.current).forEach((a) => {
+      if (a) {
+        a.preload = "auto";
+        a.load();
+      }
+    });
+  }, []);
+
+  // attempt to unlock audio on a custom event (dispatched from app on first user gesture)
+  useEffect(() => {
+    const tryUnlock = () => {
+      if (unlocked.current) return;
+      unlocked.current = true;
+      // attempt quick play/pause on each audio element to satisfy autoplay policy
       Object.values(audio.current).forEach((a) => {
-        if (a) {
-          a.preload = "auto";
-          a.load();
+        if (!a) return;
+        try {
+          a.currentTime = 0;
+          const p = a.play();
+          if (p && typeof p.then === "function") {
+            p.then(() => {
+              a.pause();
+              a.currentTime = 0;
+              // keep loaded for future plays
+            }).catch((err) => {
+              // ignore but log for debugging
+              // console.warn("Mascot: audio unlock play rejected", err);
+            });
+          }
+        } catch (err) {
+          // console.warn("Mascot audio unlock try failed", err);
         }
       });
-    }
+    };
+
+    window.addEventListener("user-interaction", tryUnlock);
+    // also listen to any direct pointerdown to be safe
+    window.addEventListener("pointerdown", tryUnlock, { once: true });
+
+    return () => {
+      window.removeEventListener("user-interaction", tryUnlock);
+      window.removeEventListener("pointerdown", tryUnlock as any);
+    };
   }, []);
 
   const play = (kind: "correct" | "wrong" | "tickle") => {
@@ -37,11 +76,14 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, i
     if (!a) return;
     try {
       a.currentTime = 0;
-      a.play().catch(() => {});
-    } catch {}
+      const p = a.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    } catch {
+      // swallow autoplay errors
+    }
   };
 
-  // CSS (scoped) — original visuals + animations
+  // CSS injection (same as before)
   useEffect(() => {
     if (document.getElementById("mascot-merged-styles")) return;
     const style = document.createElement("style");
@@ -73,28 +115,26 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, i
     document.head.appendChild(style);
   }, []);
 
-  // react when parent toggles either outcome OR isCelebrating
+  // Sync incoming expression prop to internal state when not animating/tickled
   useEffect(() => {
-    if (isAnimating) return;
-    if (outcome === "correct") {
-      triggerCorrect();
-      return;
-    }
-    if (outcome === "wrong") {
-      triggerWrong();
-      return;
+    if (isAnimating || isTickled) return;
+    if (expression !== currentExpression) {
+      setCurrentExpression(expression);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [outcome]);
+  }, [expression]);
 
+  // Respond to outcome or isCelebrating from parent by triggering actions locally
   useEffect(() => {
-    // if parent flips isCelebrating true (old behavior), treat as correct celebration
+    if (!outcome && !isCelebrating) return;
     if (isAnimating) return;
-    if (isCelebrating) {
+    if (outcome === "correct" || isCelebrating) {
       triggerCorrect();
+    } else if (outcome === "wrong") {
+      triggerWrong();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isCelebrating]);
+  }, [outcome, isCelebrating]);
 
   const triggerCorrect = () => {
     setIsAnimating(true);
@@ -145,7 +185,6 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, i
     }, 400);
   };
 
-  // face shapes (kept original look)
   const expressions: Record<string, React.ReactNode> = {
     happy: (
       <>
@@ -227,21 +266,19 @@ const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null, i
           </filter>
         </defs>
 
-        {/* Body & Hands */}
         <g>
           <path d={bodyPath} fill="url(#mascotGradientMerged)" />
           <path d="M 4,30 C 0,31 0,36 4,37" fill="url(#mascotGradientMerged)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
           <path d="M 46,30 C 50,31 50,36 46,37" fill="url(#mascotGradientMerged)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
         </g>
 
-        {/* Inner sheen */}
         <path d={bodyPath} fill="transparent" stroke="rgba(255,255,255,0.2)" strokeWidth="3" />
 
-        {/* Face group */}
         <g className="transition-opacity duration-300" transform="translate(0,0)">
           <circle cx="13" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilterMerged)" />
           <circle cx="37" cy="30" r={isTickled ? 5.5 : 4} className="mascot-blush" fill="#FFC0CB" opacity={isTickled ? "0.85" : "0.7"} filter="url(#blushFilterMerged)" />
 
+          {/* render expression based on internal currentExpression */}
           {expressions[currentExpression]}
 
           {tears}
