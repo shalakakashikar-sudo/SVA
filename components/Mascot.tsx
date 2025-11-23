@@ -1,191 +1,124 @@
-import React, { useEffect, useRef, useState } from "react";
 
-type Outcome = "correct" | "wrong" | null;
+import React, { useState } from 'react';
 
 interface MascotProps {
-  expression?: "happy" | "thinking" | "excited" | "sad" | "tickled";
-  outcome?: Outcome;
+  expression?: 'happy' | 'thinking' | 'excited';
+  isCelebrating?: boolean;
 }
 
-const Mascot: React.FC<MascotProps> = ({ expression = "happy", outcome = null }) => {
+const Mascot: React.FC<MascotProps> = ({ expression = 'happy', isCelebrating = false }) => {
   const [isTickled, setIsTickled] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [currentExpression, setCurrentExpression] = useState(expression);
-  const [isCrying, setIsCrying] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-
-  // preload audio
-  const audio = useRef({
-    correct: typeof window !== "undefined" ? new Audio("/sounds/correct.wav") : undefined,
-    wrong: typeof window !== "undefined" ? new Audio("/sounds/wrong.wav") : undefined,
-    tickle: typeof window !== "undefined" ? new Audio("/sounds/tickle.wav") : undefined,
-  });
-
-  const play = (k: "correct" | "wrong" | "tickle") => {
-    const a = audio.current[k];
-    if (!a) return;
-    try {
-      a.currentTime = 0;
-      a.play().catch(() => {});
-    } catch {}
-  };
-
-  // inject animations + tear keyframes once
-  useEffect(() => {
-    if (document.getElementById("mascot-css")) return;
-    const style = document.createElement("style");
-    style.id = "mascot-css";
-    style.innerHTML = `
-      .mascot-wrapper { display:inline-block; cursor:pointer; }
-      
-      .mascot-celebrate {
-        animation: spinDance 1s ease-in-out both;
-      }
-      @keyframes spinDance {
-        0%   { transform: rotate(0deg) scale(1); }
-        40%  { transform: rotate(180deg) scale(1.03); }
-        100% { transform: rotate(360deg) scale(1); }
-      }
-
-      .mascot-tickle {
-        animation: tickle 0.4s ease-in-out both;
-      }
-      @keyframes tickle {
-        0%,100% { transform: rotate(0deg); }
-        25% { transform: rotate(-8deg); }
-        50% { transform: rotate(8deg); }
-        75% { transform: rotate(-5deg); }
-      }
-
-      .mascot-cry {
-        animation: cryBob 1s ease both;
-      }
-      @keyframes cryBob {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(4px); }
-        100% { transform: translateY(0); }
-      }
-
-      .tear {
-        animation: tearFall 0.8s linear forwards;
-      }
-      @keyframes tearFall {
-        0%   { opacity:1; transform:translateY(0); }
-        100% { opacity:0; transform:translateY(20px); }
-      }
-    `;
-    document.head.appendChild(style);
-  }, []);
-
-  // handle outcome animations
-  useEffect(() => {
-    if (!outcome || isAnimating) return;
-
-    if (outcome === "correct") {
-      correctAnim();
-    } else if (outcome === "wrong") {
-      wrongAnim();
-    }
-  }, [outcome]);
-
-  const correctAnim = () => {
-    setIsAnimating(true);
-    setCurrentExpression("happy");
-    play("correct");
-
-    const el = wrapperRef.current;
-    el?.classList.add("mascot-celebrate");
-
-    setTimeout(() => {
-      el?.classList.remove("mascot-celebrate");
-      setIsAnimating(false);
-    }, 1000);
-  };
-
-  const wrongAnim = () => {
-    setIsAnimating(true);
-    setCurrentExpression("sad");
-    setIsCrying(true);
-    play("wrong");
-
-    const el = wrapperRef.current;
-    el?.classList.add("mascot-cry");
-
-    setTimeout(() => {
-      setIsCrying(false);
-      el?.classList.remove("mascot-cry");
-      setIsAnimating(false);
-    }, 1000);
-  };
 
   const handleTickle = () => {
-    if (isAnimating) return;
-
+    if (isTickled) return; // Prevent re-triggering while animation is playing
     setIsTickled(true);
-    setCurrentExpression("tickled");
-    play("tickle");
-
-    const el = wrapperRef.current;
-    el?.classList.add("mascot-tickle");
-
     setTimeout(() => {
       setIsTickled(false);
-      setCurrentExpression(expression);
-      el?.classList.remove("mascot-tickle");
-    }, 400);
+    }, 400); // Corresponds to the animation duration
   };
 
-  // facial expressions
-  const faces: Record<string, React.ReactNode> = {
+  const expressions = {
     happy: (
       <>
+        {/* Eyes */}
         <ellipse cx="18" cy="24" rx="2.5" ry="4.5" fill="black" />
         <ellipse cx="32" cy="24" rx="2.5" ry="4.5" fill="black" />
-        <path d="M 20 32 C 23 36, 27 36, 30 32" stroke="black" strokeWidth="1.6" fill="none" strokeLinecap="round" />
+        {/* Eye Highlights */}
+        <circle cx="19" cy="22" r="1" fill="white" />
+        <circle cx="33" cy="22" r="1" fill="white" />
+        {/* Mouth */}
+        <path d="M 21 34 C 23 37, 27 37, 29 34" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+      </>
+    ),
+    thinking: (
+      <>
+        {/* Eyes */}
+        <ellipse cx="16" cy="24" rx="2.5" ry="4.5" fill="black" />
+        <ellipse cx="30" cy="24" rx="2.5" ry="4.5" fill="black" />
+        {/* Eye Highlights */}
+        <circle cx="17" cy="22" r="1" fill="white" />
+        <circle cx="31" cy="22" r="1" fill="white" />
+        {/* Mouth */}
+        <path d="M 23 35 L 27 35" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        {/* Thinking Eyebrow */}
+        <path d="M 14 18 C 16 16, 19 16, 21 18" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+      </>
+    ),
+    // This will be used for incorrect answers, so it's more of a surprised/oops face
+    excited: (
+      <>
+        {/* Eyes */}
+        <ellipse cx="18" cy="25" rx="3.5" ry="5.5" fill="black" />
+        <ellipse cx="32" cy="25" rx="3.5" ry="5.5" fill="black" />
+         {/* Eye Highlights */}
+        <circle cx="19.5" cy="23" r="1.5" fill="white" />
+        <circle cx="33.5" cy="23" r="1.5" fill="white" />
+        {/* Mouth */}
+        <ellipse cx="25" cy="36" rx="4" ry="4" stroke="black" strokeWidth="1.5" fill="none" />
       </>
     ),
     tickled: (
-      <>
-        <path d="M 16 26 C 18 22, 22 22, 24 26" stroke="black" strokeWidth="1.5" fill="none" />
-        <path d="M 30 26 C 32 22, 36 22, 38 26" stroke="black" strokeWidth="1.5" fill="none" />
-        <path d="M 20 33 C 22 38, 28 38, 30 33" stroke="black" strokeWidth="1.5" fill="#fff" />
-      </>
-    ),
-    sad: (
-      <>
-        <ellipse cx="18" cy="26" rx="2" ry="3" fill="black" />
-        <ellipse cx="32" cy="26" rx="2" ry="3" fill="black" />
-        <path d="M 21 36 C 23 33, 27 33, 29 36" stroke="black" strokeWidth="1.2" fill="none" />
-      </>
-    ),
-    thinking: null,
-    excited: null,
+        <>
+          {/* Eyes (squinted laughing) */}
+          <path d="M 16 26 C 18 22, 22 22, 24 26" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+          <path d="M 30 26 C 32 22, 36 22, 38 26" stroke="black" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+          {/* Mouth (big laugh) */}
+          <path d="M 20 33 C 22 38, 28 38, 30 33" stroke="black" strokeWidth="1.5" fill="#FFFBFF" strokeLinecap="round" />
+        </>
+      )
   };
 
   const bodyPath = "M 46 28 C 46 40 38 48 25 48 C 12 48 4 40 4 28 C 4 16 12 5 25 5 C 38 5 46 16 46 28 Z";
 
-  const tears = isCrying ? (
-    <g>
-      <path className="tear" d="M13 32 C14 34,16 34,16 36 C16 38,13 38,13 36 Z" fill="#99ccff" />
-      <path className="tear" style={{ animationDelay: "100ms" }} d="M37 32 C38 34,40 34,40 36 C40 38,37 38,37 36 Z" fill="#99ccff" />
-    </g>
-  ) : null;
+  const currentAnimation = isTickled 
+    ? 'mascot-tickle-animation' 
+    : isCelebrating 
+    ? 'mascot-celebrate-animation' 
+    : 'mascot-bob-animation';
 
   return (
-    <div ref={wrapperRef} className="mascot-wrapper" onClick={handleTickle}>
-      <svg width="112" height="112" viewBox="0 0 50 50">
+    <div 
+      className={`flex flex-col items-center transition-transform duration-300 ease-in-out hover:scale-105 ${currentAnimation}`}
+      onClick={handleTickle}
+      style={{ cursor: 'pointer' }}
+      title="Tickle me!"
+    >
+      <svg width="112" height="112" viewBox="0 0 50 50" className="drop-shadow-lg">
         <defs>
-          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#a855f7" />
-            <stop offset="100%" stopColor="#ec4899" />
+          <linearGradient id="mascotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{ stopColor: '#a855f7', stopOpacity: 1 }} /> 
+            <stop offset="100%" style={{ stopColor: '#ec4899', stopOpacity: 1 }} />
           </linearGradient>
+          <filter id="blush">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+          </filter>
         </defs>
+        
+        {/* Body & Hands Group */}
+        <g>
+            {/* Body */}
+            <path d={bodyPath} fill="url(#mascotGradient)" />
+            {/* Hands */}
+            <path d="M 4,30 C 0,31 0,36 4,37" fill="url(#mascotGradient)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
+            <path d="M 46,30 C 50,31 50,36 46,37" fill="url(#mascotGradient)" stroke="rgba(0,0,0,0.1)" strokeWidth="0.5" />
+        </g>
+        
+        {/* Inner shadow for depth */}
+        <path 
+          d={bodyPath}
+          fill="transparent"
+          stroke="rgba(255,255,255,0.2)"
+          strokeWidth="3"
+        />
+        
+        {/* Face */}
+        <g className="transition-opacity duration-300">
+          {/* Blush */}
+          <circle cx="13" cy="30" r={isTickled ? 5.5 : 4} fill="#FFC0CB" opacity={isTickled ? "0.8" : "0.7"} filter="url(#blush)" style={{transition: 'r 0.2s ease-in-out'}} />
+          <circle cx="37" cy="30" r={isTickled ? 5.5 : 4} fill="#FFC0CB" opacity={isTickled ? "0.8" : "0.7"} filter="url(#blush)" style={{transition: 'r 0.2s ease-in-out'}}/>
 
-        <path d={bodyPath} fill="url(#g1)" />
-        <path d={bodyPath} fill="transparent" stroke="rgba(255,255,255,0.25)" strokeWidth="3" />
-
-        {faces[currentExpression]}
-        {tears}
+          {isTickled ? expressions.tickled : expressions[expression]}
+        </g>
       </svg>
     </div>
   );
