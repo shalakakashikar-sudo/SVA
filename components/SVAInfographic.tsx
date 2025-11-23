@@ -108,6 +108,9 @@ const SVAInfographic: React.FC = () => {
   // NEW: outcome state for mascot ("correct" | "wrong" | null)
   const [outcome, setOutcome] = useState<"correct" | "wrong" | null>(null);
 
+  // NEW: audio unlock flag (dispatches one user-interaction event to unlock audio)
+  const [audioUnlocked, setAudioUnlocked] = useState(false);
+
   const handleRuleSelect = (rule: Rule | null) => {
     setSelectedRule(rule);
     setActiveExample(null);
@@ -115,6 +118,7 @@ const SVAInfographic: React.FC = () => {
     setQuizMode(false);
     setShowConfig(false);
     setShowSummary(false);
+    setOutcome(null);
   };
 
   // Helper to gather questions from all rules for Mastery Mode
@@ -155,10 +159,17 @@ const SVAInfographic: React.FC = () => {
     // Reset other states
     setQuizMode(false);
     setShowSummary(false);
+    setOutcome(null);
   };
 
   // Step 2: User selects question count -> Start Quiz
   const startQuiz = (count: number) => {
+    // Unlock audio on first gesture
+    if (!audioUnlocked) {
+      setAudioUnlocked(true);
+      window.dispatchEvent(new Event('user-interaction'));
+    }
+
     let selected: QuizQuestion[];
 
     if (selectedRule === null) {
@@ -182,6 +193,12 @@ const SVAInfographic: React.FC = () => {
   };
 
   const handleAnswer = (index: number) => {
+    // Unlock audio on first gesture (answers are user gestures)
+    if (!audioUnlocked) {
+      setAudioUnlocked(true);
+      window.dispatchEvent(new Event('user-interaction'));
+    }
+
     if (answered) return;
     
     setSelectedAnswer(index);
@@ -229,6 +246,7 @@ const SVAInfographic: React.FC = () => {
     setQuizMode(false);
     setShowConfig(false);
     setShowSummary(false);
+    setOutcome(null);
   };
 
   // --- VIEW: QUIZ CONFIGURATION ---
@@ -247,7 +265,8 @@ const SVAInfographic: React.FC = () => {
             <ChevronLeftIcon size={24} />
           </button>
           <div className="flex justify-center mb-6">
-            <Mascot expression="thinking" />
+            {/* changed to happy so it matches main page */}
+            <Mascot expression="happy" />
           </div>
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-2 font-poppins">Quiz Setup</h2>
           <p className="text-center text-gray-600 mb-6">
