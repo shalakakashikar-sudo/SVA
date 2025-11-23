@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { Rule, QuizQuestion, Difficulty } from '../types.ts';
 import { ruleCategories, initialQuizQuestions, ruleQuizzes } from '../data/rules.ts';
@@ -106,6 +105,9 @@ const SVAInfographic: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [celebrateMascot, setCelebrateMascot] = useState(false);
 
+  // NEW: outcome state for mascot ("correct" | "wrong" | null)
+  const [outcome, setOutcome] = useState<"correct" | "wrong" | null>(null);
+
   const handleRuleSelect = (rule: Rule | null) => {
     setSelectedRule(rule);
     setActiveExample(null);
@@ -176,6 +178,7 @@ const SVAInfographic: React.FC = () => {
     setAnswered(false);
     setSelectedAnswer(null);
     setCelebrateMascot(false);
+    setOutcome(null); // reset outcome
   };
 
   const handleAnswer = (index: number) => {
@@ -185,10 +188,24 @@ const SVAInfographic: React.FC = () => {
     setAnswered(true);
     
     const currentQ = activeQuizQuestions[currentQuestion];
-    
+    if (!currentQ) return;
+
     if (index === currentQ.correct) {
       setScore(score + 1);
       setCelebrateMascot(true);
+      setOutcome("correct");
+
+      // clear celebration + outcome after 1s
+      setTimeout(() => {
+        setCelebrateMascot(false);
+        setOutcome(null);
+      }, 1000);
+    } else {
+      // wrong answer: set outcome to wrong briefly
+      setOutcome("wrong");
+      setTimeout(() => {
+        setOutcome(null);
+      }, 1000);
     }
   };
 
@@ -200,6 +217,7 @@ const SVAInfographic: React.FC = () => {
       setAnswered(false);
       setSelectedAnswer(null);
       setCelebrateMascot(false);
+      setOutcome(null);
     } else {
       // Finish Quiz -> Show Summary
       setQuizMode(false);
@@ -365,7 +383,8 @@ const SVAInfographic: React.FC = () => {
             >
               <ChevronLeftIcon size={24}/>
             </button>
-            <Mascot expression={mascotExpression} isCelebrating={isCorrect && celebrateMascot} />
+            {/* PASS outcome + legacy isCelebrating */}
+            <Mascot expression={mascotExpression} isCelebrating={isCorrect && celebrateMascot} outcome={outcome} />
             <div className="text-right">
               <div className="text-sm text-gray-600">Question {currentQuestion + 1}/{questions.length}</div>
               <div className="text-lg font-bold text-violet-600 font-poppins">Score: {score}</div>
