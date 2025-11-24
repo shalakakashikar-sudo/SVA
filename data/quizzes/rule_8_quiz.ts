@@ -1,1060 +1,159 @@
-
 import type { QuizQuestion } from '../../types.ts';
 
-export const rule8Quiz: QuizQuestion[] = [
-  // A. Easy Level (50 Questions)
-  {
-    question: "The principal, along with the teachers, ___ the meeting.",
-    options: ["attend", "attending", "attended", "attends"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The principal'."
-  },
-  {
-    question: "My brother, along with his friends, ___ coming.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'My brother'."
-  },
-  {
-    question: "The singer, as well as her bandmates, ___ weekly.",
-    options: ["perform", "performing", "performed", "performs"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The singer'."
-  },
-  {
-    question: "The book, together with the notes, ___ on the desk.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The book'."
-  },
-  {
-    question: "The manager, as well as the employees, ___ left the office.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The manager'."
-  },
-  {
-    question: "The dog, as well as the puppies, ___ happy.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The dog'."
-  },
-  {
-    question: "The teacher, not the students, ___ responsible.",
-    options: ["are", "were", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular affirmative subject 'The teacher'."
-  },
-  {
-    question: "The student, along with his classmates, ___ the assignment.",
-    options: ["finish", "finishing", "finished", "finishes"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The verb agrees with the singular main subject 'The student', requiring the verb ending in '-es'."
-  },
-  {
-    question: "The captain, together with his crew, ___ prepared for the storm.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular subject 'The captain' dictates the singular verb 'was'."
-  },
-  {
-    question: "The cat, including her kittens, ___ playing.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The cat' requires the singular verb 'is'."
-  },
-  {
-    question: "The owner, as well as the staff, ___ happy with the results.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The owner' requires the singular verb 'is'."
-  },
-  {
-    question: "The actor, along with the director, ___ arrived for the premiere.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The actor' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The lamp, in addition to the books, ___ misplaced.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The lamp' requires the singular verb 'was'."
-  },
-  {
-    question: "The car, besides the two bicycles, ___ sold quickly.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The car' requires the singular verb 'was'."
-  },
-  {
-    question: "The mother, with her children, ___ down my street.",
-    options: ["walk", "walking", "walked", "walks"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The mother' requires the singular verb 'walks'."
-  },
-  {
-    question: "The dog, unlike the puppies, ___ its dinner quickly.",
-    options: ["eat", "eating", "ate", "eats"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The dog' requires the singular verb 'eats'."
-  },
-  {
-    question: "The chair, as well as the desks, ___ recently cleaned.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The chair' requires the singular verb 'was'."
-  },
-  {
-    question: "The security guard, along with his colleagues, ___ the premises.",
-    options: ["patrols", "patrol", "patrolling", "patrolled"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular subject 'The security guard' requires the singular verb 'patrols'."
-  },
-  {
-    question: "The package, including its contents, ___ sealed.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The package' requires the singular verb 'was'."
-  },
-  {
-    question: "The tutor, together with the students, ___ early today.",
-    options: ["arrive", "arriving", "arrived", "arrives"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The tutor' requires the singular verb 'arrives'."
-  },
-  {
-    question: "The pencil, as well as the erasers, ___ missing from the case.",
-    options: ["were", "are", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The pencil' requires the singular verb 'is'."
-  },
-  {
-    question: "The student, not his peers, ___ achieved the highest score.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular affirmative subject 'The student' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The child, along with her parents, ___ visiting the museum.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The child' requires the singular verb 'is'."
-  },
-  {
-    question: "The cat, besides its toys, ___ been relocated.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The cat' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The house, including the gardens, ___ been sold.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The house' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The owner, together with his wife, ___ the press.",
-    options: ["greet", "greeting", "greeted", "greets"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The owner' requires the singular verb 'greets'."
-  },
-  {
-    question: "The principal, as well as the faculty, ___ a meeting.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The principal' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The script, along with the costumes, ___ approved.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The script' requires the singular verb 'was'."
-  },
-  {
-    question: "The singer, not her backing vocalists, ___ the song.",
-    options: ["write", "writing", "wrote", "writes"],
-    correct: 3,
-    difficulty: "easy",
-    explanation: "The singular affirmative subject 'The singer' requires the singular verb 'writes'."
-  },
-  {
-    question: "The manager, in addition to the supervisors, ___ reviewing the data.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The manager' requires the singular verb 'is'."
-  },
-  {
-    question: "The book, besides the documents, ___ been stolen.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The book' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The car, along with the bicycles, ___ parked in the garage.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The car' requires the singular verb 'was'."
-  },
-  {
-    question: "The doctor, as well as the nurses, ___ the patient.",
-    options: ["monitors", "monitor", "monitoring", "monitored"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The doctor' requires the singular verb 'monitors'."
-  },
-  {
-    question: "The report, together with the findings, ___ surprising.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The report' requires the singular verb 'was'."
-  },
-  {
-    question: "The student, including the parents, ___ notified.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The student' requires the singular verb 'was'."
-  },
-  {
-    question: "The tutor, as well as the students, ___ late.",
-    options: ["were", "are", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The tutor' requires the singular verb 'is'."
-  },
-  {
-    question: "The puppy, along with the adult dogs, ___ to the park.",
-    options: ["runs", "run", "running", "ran"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The puppy' requires the singular verb 'runs'."
-  },
-  {
-    question: "The pencil, not the rulers, ___ required for the task.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular affirmative subject 'The pencil' requires the singular verb 'is'."
-  },
-  {
-    question: "The computer, besides the monitors, ___ functioning well.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The computer' requires the singular verb 'is'."
-  },
-  {
-    question: "The manager, together with his team members, ___ the goal.",
-    options: ["achieves", "achieve", "achieving", "achieved"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The manager' requires the singular verb 'achieves'."
-  },
-  {
-    question: "The chair, including the cushions, ___ stained.",
-    options: ["were", "are", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The chair' requires the singular verb 'is'."
-  },
-  {
-    question: "The customer, as well as the onlookers, ___ the incident.",
-    options: ["watches", "watch", "watching", "watched"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The customer' requires the singular verb 'watches'."
-  },
-  {
-    question: "The owner, not the renters, ___ responsible for the bills.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular affirmative subject 'The owner' requires the singular verb 'is'."
-  },
-  {
-    question: "The single file, along with the documents, ___ missing.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The single file' requires the singular verb 'was'."
-  },
-  {
-    question: "The report, besides the graphs, ___ detailed information.",
-    options: ["contains", "contain", "containing", "contained"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The report' requires the singular verb 'contains'."
-  },
-  {
-    question: "The principal, together with the senior faculty, ___ the new rules.",
-    options: ["drafts", "draft", "drafting", "drafted"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The principal' requires the singular verb 'drafts'."
-  },
-  {
-    question: "The girl, including her pets, ___ moved to Australia.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The girl' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The table, as well as the chairs, ___ sold.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The table' requires the singular verb 'was'."
-  },
-  {
-    question: "The student, along with the teacher, ___ praised for his work.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular main subject 'The student' requires the singular verb 'was'."
-  },
-  {
-    question: "The phone, not the accessories, ___ broken.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "The singular affirmative subject 'The phone' requires the singular verb 'is'."
-  },
+export const rule7Quiz: QuizQuestion[] = [
+  // A. Easy Level
+  { question: "The list of rules ___ confusing.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of rules'; the singular subject 'list' requires 'is'." },
+  { question: "A pile of books ___ on the table.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of books'; the singular subject 'pile' requires 'is'." },
+  { question: "The sound of the bells ___ loud.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the bells'; the singular subject 'sound' requires 'is'." },
+  { question: "The basket of apples ___ heavy.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of apples'; the singular subject 'basket' requires 'is'." },
+  { question: "The bouquet of flowers ___ beautiful.", options: ["are", "were", "was", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of flowers'; the singular subject 'bouquet' requires 'was'." },
+  { question: "The box of tea ___ sitting on the counter.", options: ["is", "are", "was", "has been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of tea'; the singular subject 'box' requires 'was'." },
+  { question: "The manager of the branches ___ always working.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the branches'; the singular subject 'manager' requires 'is'." },
+  { question: "One of the students ___ late for class.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the students'; the singular subject 'One' requires 'is'." },
+  { question: "The report on the recent fires ___ encouraging.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'on the recent fires'; the singular subject 'report' requires 'is'." },
+  { question: "The jar of pickles ___ fresh. (Present Tense)", options: ["smell", "smelling", "smelled", "smells"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'of pickles'; the singular subject 'jar' requires 'smells'." },
+  { question: "The book with the colorful pictures ___ missing.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'with the colorful pictures'; the singular subject 'book' requires 'is'." },
+  { question: "The decisions of the committee ___ binding. (Past Tense)", options: ["is", "are", "were", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the committee'; the plural subject 'decisions' requires 'were'." },
+  { question: "The quality of these apples ___ good.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of these apples'; the singular subject 'quality' requires 'is'." },
+  { question: "The rhythm of the pounding waves ___ calming.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the pounding waves'; the singular subject 'rhythm' requires 'is'." },
+  { question: "The information about the new policies ___ been released.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "easy", explanation: "Rule 7: Ignore 'about the new policies'; the singular subject 'information' requires 'has'." },
+  { question: "The recipe for the baked goods ___ simple.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'for the baked goods'; the singular subject 'recipe' requires 'is'." },
+  { question: "The condition of the old tires ___ dangerous.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the old tires'; the singular subject 'condition' requires 'is'." },
+  { question: "The box of crayons ___ missing. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of crayons'; the singular subject 'box' requires 'was'." },
+  { question: "The subject of the five lengthy chapters ___ complex. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'of the five lengthy chapters'; the singular subject 'subject' requires 'was'." },
+  { question: "The woman with all the dogs ___ down my street.", options: ["walk", "walking", "walked", "walks"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'with all the dogs'; the singular subject 'woman' requires 'walks'." },
+  { question: "The feedback from the tutors ___ students improve.", options: ["help", "helping", "helped", "helps"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'from the tutors'; the singular subject 'feedback' requires 'helps'." },
+  { question: "The key to the locked doors ___ been found.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "easy", explanation: "Rule 7: Ignore 'to the locked doors'; the singular subject 'key' requires 'has'." },
+  { question: "The decision to fund the new laboratories ___ pending.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'to fund the new laboratories'; the singular subject 'decision' requires 'is'." },
+  { question: "The mother duck with all of her little ducklings ___ to the store.", options: ["walk", "walking", "walked", "walks"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'with all of her little ducklings'; the singular subject 'mother duck' requires 'walks'." },
+  { question: "The price of the imported oranges ___ high.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the imported oranges'; the singular subject 'price' requires 'is'." },
+  { question: "One of the answers ___ provided in the text.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the answers'; the singular subject 'One' requires 'is'." },
+  { question: "The flavor of the new drinks ___ very intense.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'of the new drinks'; the singular subject 'flavor' requires 'is'." },
+  { question: "The list of ingredients ___ on the counter.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of ingredients'; the singular subject 'list' requires 'is'." },
+  { question: "The cost of all these articles ___ risen.", options: ["have", "has", "is", "are"], correct: 1, difficulty: "easy", explanation: "Rule 7: Ignore 'of all these articles'; the singular subject 'cost' requires 'has'." },
+  { question: "A selection of photos ___ displayed on the wall. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of photos'; the singular subject 'selection' requires 'was'." },
+  { question: "The purpose of the new rules ___ clear.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'of the new rules'; the singular subject 'purpose' requires 'is'." },
+  { question: "The woman with the bright scarf ___ always smiling.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'with the bright scarf'; the singular subject 'woman' requires 'is'." },
+  { question: "The house across the street with two large trees ___ been sold.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "easy", explanation: "Rule 7: Ignore the phrase starting 'across...'; the singular subject 'house' requires 'has'." },
+  { question: "The paper on the desks ___ ready for collection.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'on the desks'; the singular subject 'paper' requires 'is'." },
+  { question: "The quality of the textiles ___ impressive.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the textiles'; the singular subject 'quality' requires 'is'." },
+  { question: "The bottle of water ___ finished.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of water'; the singular subject 'bottle' requires 'is'." },
+  { question: "The student with the many awards ___ sitting quietly.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'with the many awards'; the singular subject 'student' requires 'is'." },
+  { question: "The collection of rare stamps ___ worth a fortune.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of rare stamps'; the singular subject 'collection' requires 'is'." },
+  { question: "The road between the two cities ___ undergoing repairs.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'between the two cities'; the singular subject 'road' requires 'is'." },
+  { question: "The camera with the large lens ___ expensive.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'with the large lens'; the singular subject 'camera' requires 'is'." },
+  { question: "The sound of the wind chimes ___ peaceful. (Present Tense)", options: ["sound", "sounding", "sounded", "sounds"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'of the wind chimes'; the singular subject 'sound' requires 'sounds'." },
+  { question: "The box of donated items ___ full. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of donated items'; the singular subject 'box' requires 'was'." },
+  { question: "The owner of the small shops ___ happy with the sales.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the small shops'; the singular subject 'owner' requires 'is'." },
+  { question: "The manager of the team ___ reviewing the video.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the team'; the singular subject 'manager' requires 'is'." },
+  { question: "The girl with the three bicycles ___ my neighbor.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'with the three bicycles'; the singular subject 'girl' requires 'is'." },
+  { question: "The aroma of the baked goods ___ wonderful.", options: ["smell", "smelling", "smelled", "smells"], correct: 3, difficulty: "easy", explanation: "Rule 7: Ignore 'of the baked goods'; the singular subject 'aroma' requires 'smells'." },
+  { question: "The fence around the gardens ___ newly built.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'around the gardens'; the singular subject 'fence' requires 'is'." },
+  { question: "The color of the many leaves ___ changing rapidly.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 7: Ignore 'of the many leaves'; the singular subject 'color' requires 'is'." },
+  { question: "The set of tools ___ missing a wrench.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of tools'; the singular subject 'set' requires 'is'." },
+  { question: "The quality of the services ___ often questioned.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 7: Ignore 'of the services'; the singular subject 'quality' requires 'is'." },
 
-  // B. Medium Level (50 Questions)
-  {
-    question: "The students, along with the principal, ___ arrived.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The verb agrees with the plural main subject 'The students'."
-  },
-  {
-    question: "My parents, as well as my sister, ___ traveling tomorrow.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The verb agrees with the plural main subject 'My parents'."
-  },
-  {
-    question: "The books, together with the pen, ___ on the desk.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The verb agrees with the plural main subject 'The books'."
-  },
-  {
-    question: "The documents, including the final report, ___ been sealed.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The documents' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The singers, as well as their manager, ___ weekly.",
-    options: ["performs", "performing", "performed", "perform"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The singers' requires the plural base verb 'perform'."
-  },
-  {
-    question: "The dog and cat, along with the puppies, ___ happy.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The compound (plural) main subject 'The dog and cat' requires the plural verb 'are'."
-  },
-  {
-    question: "The children, not their mother, ___ responsible for the mess.",
-    options: ["is", "was", "are", "has been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The children' requires the plural verb 'are'."
-  },
-  {
-    question: "The players, along with the coach, ___ the match.",
-    options: ["wins", "winning", "won", "win"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The players' requires the plural base verb 'win'."
-  },
-  {
-    question: "The two teachers, accompanied by the principal, ___ attending the conference.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The two teachers' requires the plural verb 'are'."
-  },
-  {
-    question: "The flowers, including the single rose, ___ beautiful.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The flowers' requires the plural verb 'are'."
-  },
-  {
-    question: "The tutors, together with the manager, ___ reviewing the applications.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The tutors' requires the plural verb 'are'."
-  },
-  {
-    question: "The friends, as well as my brother, ___ planning a trip.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The friends' requires the plural verb 'are'."
-  },
-  {
-    question: "The plates, in addition to the bowl, ___ been washed.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The plates' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The results, besides the single outlier, ___ reliable.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The results' requires the plural verb 'are'."
-  },
-  {
-    question: "The parents, with their child, ___ outside.",
-    options: ["wait", "waits", "waiting", "waited"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The parents' requires the plural base verb 'wait'."
-  },
-  {
-    question: "The dogs, unlike the cat, ___ their dinner quickly.",
-    options: ["eats", "eating", "ate", "eat"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The dogs' requires the plural base verb 'eat'."
-  },
-  {
-    question: "The chairs, as well as the table, ___ recently cleaned.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The chairs' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The supervisors, along with the manager, ___ the premises.",
-    options: ["patrols", "patrol", "patrolling", "patrolled"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The supervisors' requires the plural base verb 'patrol'."
-  },
-  {
-    question: "The boxes, including the single package, ___ sealed.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The boxes' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The students, together with the tutor, ___ early today.",
-    options: ["arrives", "arriving", "arrived", "arrive"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The students' requires the plural base verb 'arrive'."
-  },
-  {
-    question: "The pencils, as well as the single eraser, ___ missing.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The pencils' requires the plural verb 'are'."
-  },
-  {
-    question: "The peers, not the teacher, ___ the highest scores.",
-    options: ["achieves", "achieved", "achieving", "achieve"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The peers' requires the plural base verb 'achieve'."
-  },
-  {
-    question: "The children, along with her mother, ___ visiting the museum.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The children' requires the plural verb 'are'."
-  },
-  {
-    question: "The documents, besides the single file, ___ been relocated.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The documents' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The houses, including the garden, ___ been sold.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The houses' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The owners, together with the wife, ___ the press.",
-    options: ["greet", "greets", "greeting", "greeted"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The owners' requires the plural base verb 'greet'."
-  },
-  {
-    question: "The faculty, as well as the principal, ___ a meeting.",
-    options: ["have", "has", "is", "are"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The faculty' (used as individuals) requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The costumes, along with the script, ___ approved.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The costumes' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The vocalists, not the singer, ___ the song.",
-    options: ["writes", "writing", "wrote", "write"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The vocalists' requires the plural base verb 'write'."
-  },
-  {
-    question: "The supervisors, in addition to the manager, ___ reviewing the data.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The supervisors' requires the plural verb 'are'."
-  },
-  {
-    question: "The documents, besides the book, ___ been stolen.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The documents' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The cars, along with the bicycles, ___ parked in the garage.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The cars' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The nurses, as well as the doctor, ___ the patient.",
-    options: ["monitors", "monitor", "monitoring", "monitored"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The nurses' requires the plural base verb 'monitor'."
-  },
-  {
-    question: "The findings, together with the report, ___ surprising.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The findings' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The parents, including the student, ___ notified.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The parents' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The students, as well as the tutor, ___ late.",
-    options: ["are", "is", "was", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The students' requires the plural verb 'are'."
-  },
-  {
-    question: "The dogs, along with the puppy, ___ to the park.",
-    options: ["runs", "run", "running", "ran"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The dogs' requires the plural base verb 'run'."
-  },
-  {
-    question: "The rulers, not the pencil, ___ required for the task.",
-    options: ["are", "is", "was", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The rulers' requires the plural verb 'are'."
-  },
-  {
-    question: "The monitors, besides the computer, ___ functioning well.",
-    options: ["are", "is", "was", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The monitors' requires the plural verb 'are'."
-  },
-  {
-    question: "The team members, together with the manager, ___ the goal.",
-    options: ["achieves", "achieve", "achieving", "achieved"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The team members' requires the plural base verb 'achieve'."
-  },
-  {
-    question: "The cushions, including the chair, ___ stained.",
-    options: ["are", "is", "was", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The cushions' requires the plural verb 'are'."
-  },
-  {
-    question: "The onlookers, as well as the customer, ___ the incident.",
-    options: ["watches", "watch", "watching", "watched"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The onlookers' requires the plural base verb 'watch'."
-  },
-  {
-    question: "The renters, not the owner, ___ responsible for the bills.",
-    options: ["are", "is", "was", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The renters' requires the plural verb 'are'."
-  },
-  {
-    question: "The documents, along with the single file, ___ missing.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The documents' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The graphs, besides the report, ___ detailed information.",
-    options: ["contains", "contain", "containing", "contained"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The graphs' requires the plural base verb 'contain'."
-  },
-  {
-    question: "The senior faculty, together with the principal, ___ the new rules.",
-    options: ["drafts", "draft", "drafting", "drafted"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The senior faculty' requires the plural base verb 'draft'."
-  },
-  {
-    question: "The girls, including her pets, ___ moved to Australia.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The girls' requires the plural auxiliary 'have'."
-  },
-  {
-    question: "The chairs, as well as the table, ___ sold.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The chairs' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The teachers, along with the student, ___ praised for their work.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural main subject 'The teachers' requires the plural past auxiliary 'were'."
-  },
-  {
-    question: "The accessories, not the phone, ___ broken.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "The plural affirmative subject 'The accessories' requires the plural verb 'are'."
-  },
+  // B. Medium Level
+  { question: "The principal, along with the teachers, ___ the assembly.", options: ["address", "addressing", "addressed", "addresses"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'along with the teachers'; the singular subject 'principal' requires 'addresses'." },
+  { question: "One of the earliest things I remember ___ my third birthday.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the earliest things...'; the singular subject 'One' requires 'is'." },
+  { question: "The book, as well as the magazines, ___ on the shelf.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'as well as the magazines'; the singular subject 'book' requires 'is'." },
+  { question: "The team captain, as well as his players, ___ anxious.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'as well as his players'; the singular subject 'captain' requires 'is'." },
+  { question: "The leader, together with his supporters, ___ the rally.", options: ["address", "addressing", "addressed", "addresses"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'together with his supporters'; the singular subject 'leader' requires 'addresses'." },
+  { question: "Each of the students ___ a locker.", options: ["have", "has", "is", "are"], correct: 1, difficulty: "medium", explanation: "Rule 7: Ignore 'of the students'; the singular subject 'Each' requires 'has'." },
+  { question: "The teacher, along with the students, ___ here.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'along with the students'; the singular subject 'teacher' requires 'is'." },
+  { question: "The rhythm of the drums ___ me want to dance.", options: ["make", "making", "made", "makes"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'of the drums'; the singular subject 'rhythm' requires 'makes'." },
+  { question: "My brother, along with his friends, ___ coming.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'along with his friends'; the singular subject 'brother' requires 'is'." },
+  { question: "The sound of the waves ___ soothing.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the waves'; the singular subject 'sound' requires 'is'." },
+  { question: "The manager, together with his staff, ___ already left the office.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "medium", explanation: "Rule 7: Ignore 'together with his staff'; the singular subject 'manager' requires 'has'." },
+  { question: "The woman who sings at the opera ___ my aunt.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore the relative clause 'who sings...'; the singular subject 'woman' requires 'is'." },
+  { question: "The bouquet of white roses ___ been sold.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "medium", explanation: "Rule 7: Ignore 'of white roses'; the singular subject 'bouquet' requires 'has'." },
+  { question: "The singer, as well as her bandmates, ___ weekly.", options: ["perform", "performing", "performed", "performs"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'as well as her bandmates'; the singular subject 'singer' requires 'performs'." },
+  { question: "The tutor, with all of her classes, ___ on holiday.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'with all of her classes'; the singular subject 'tutor' requires 'is'." },
+  { question: "Each of the answers ___ provided in the key.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the answers'; the singular subject 'Each' requires 'is'." },
+  { question: "One of the most important factors ___ transparency.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the most important factors'; the singular subject 'One' requires 'is'." },
+  { question: "The tray of glasses ___ on the counter.", options: ["stand", "standing", "stood", "stands"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'of glasses'; the singular subject 'tray' requires 'stands'." },
+  { question: "The woman, with her entire family, ___ to a new city.", options: ["move", "moving", "moved", "moves"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'with her entire family'; the singular subject 'woman' requires 'moves'." },
+  { question: "The book, including all the chapters in the first section, ___ boring.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'including all the chapters...'; the singular subject 'book' requires 'is'." },
+  { question: "A driver's license, together with two other pieces of identification, ___ required.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'together with...'; the singular subject 'license' requires 'is'." },
+  { question: "The biggest problem we face ___ all the squirrels around here.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore the complement 'all the squirrels'; the singular subject 'problem' requires 'is'." },
+  { question: "The professor, along with his graduate students, ___ groundbreaking research.", options: ["publish", "publishing", "published", "publishes"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'along with...'; the singular subject 'professor' requires 'publishes'." },
+  { question: "The mother duck, including all her ducklings, ___ to the store.", options: ["walk", "walks", "walking", "walked"], correct: 1, difficulty: "medium", explanation: "Rule 7: Ignore 'including all her ducklings'; the singular subject 'mother duck' requires 'walks'." },
+  { question: "The analysis of the various scenarios ___ presented yesterday.", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'of the various scenarios'; the singular subject 'analysis' requires 'was'." },
+  { question: "The cost of the repairs ___ covered by the warranty.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the repairs'; the singular subject 'cost' requires 'is'." },
+  { question: "One of the biggest challenges ___ keeping up with technology.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the biggest challenges'; the singular subject 'One' requires 'is'." },
+  { question: "The collection of classical music ___ extensive.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of classical music'; the singular subject 'collection' requires 'is'." },
+  { question: "The cat, as well as the dogs, ___ outside.", options: ["wait", "waiting", "waited", "waits"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'as well as the dogs'; the singular subject 'cat' requires 'waits'." },
+  { question: "The list of recommended places to visit ___ very long.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of recommended places...'; the singular subject 'list' requires 'is'." },
+  { question: "One of the major obstacles ___ funding.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the major obstacles'; the singular subject 'One' requires 'is'." },
+  { question: "The student, including the other participants, ___ been notified.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "medium", explanation: "Rule 7: Ignore 'including the other participants'; the singular subject 'student' requires 'has'." },
+  { question: "The scent of the new candles ___ noticeable.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the new candles'; the singular subject 'scent' requires 'is'." },
+  { question: "The principal, with the support of her staff, ___ the new initiative.", options: ["implements", "implement", "implementing", "implemented"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'with the support...'; the singular subject 'principal' requires 'implements'." },
+  { question: "The box of chocolates ___ empty.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'of chocolates'; the singular subject 'box' requires 'is'." },
+  { question: "Each of the rules ___ listed on the website.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the rules'; the singular subject 'Each' requires 'is'." },
+  { question: "The research that supports the hypothesis ___ preliminary.", options: ["support", "supporting", "supported", "supports"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore the relative clause content; singular antecedent 'research' requires 'supports'." },
+  { question: "The woman with all the jewelry ___ next door.", options: ["lives", "live", "living", "lived"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'with all the jewelry'; the singular subject 'woman' requires 'lives'." },
+  { question: "The feedback from the committee members ___ encouraging.", options: ["were", "are", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'from the committee members'; the singular subject 'feedback' requires 'is'." },
+  { question: "The quality of the manufactured items ___ consistently high.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the manufactured items'; the singular subject 'quality' requires 'is'." },
+  { question: "The owner, together with his partners, ___ responsible for the debt.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'together with his partners'; the singular subject 'owner' requires 'is'." },
+  { question: "The subject of the complicated technical reports ___ hard to understand. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 7: Ignore 'of the complicated...'; the singular subject 'subject' requires 'was'." },
+  { question: "One of the main concerns ___ the tight timeline.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the main concerns'; the singular subject 'One' requires 'is'." },
+  { question: "The box of documents, including the transcripts, ___ sealed. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of documents...'; the singular subject 'box' requires 'was'." },
+  { question: "The professor, as well as the students, ___ working on the project.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'as well as the students'; the singular subject 'professor' requires 'is'." },
+  { question: "The new schedule of classes ___ posted on the board.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of classes'; the singular subject 'schedule' requires 'is'." },
+  { question: "Each of the tools ___ specialized for this job.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'of the tools'; the singular subject 'Each' requires 'is'." },
+  { question: "His greatest hope ___ success in exams.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore the complement 'success'; the singular subject 'hope' requires 'is'." },
+  { question: "The building, along with the grounds, ___ managed by an outside firm.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 7: Ignore 'along with the grounds'; the singular subject 'building' requires 'is'." },
+  { question: "The aroma of the flowers ___ throughout the room.", options: ["waft", "wafting", "wafted", "wafts"], correct: 3, difficulty: "medium", explanation: "Rule 7: Ignore 'of the flowers'; the singular subject 'aroma' requires 'wafts'." },
 
-  // C. Hard Level (50 Questions)
-  {
-    question: "Each ticket, along with the information booklet, ___ twenty pounds.",
-    options: ["cost", "costing", "costed", "costs"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular subject 'Each' (distributive marker) requires the singular verb 'costs'."
-  },
-  {
-    question: "The analyst, together with the senior advisors, ___ reviewing the policy.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular main subject 'The analyst' requires the singular verb 'is'."
-  },
-  {
-    question: "Nobody, along with the tutors, ___ working late tonight.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular indefinite pronoun 'Nobody' requires the singular verb 'is'."
-  },
-  {
-    question: "The book, including all the chapters in the first section, ___ boring.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular main subject 'The book' requires the singular verb 'is'."
-  },
-  {
-    question: "The team, as well as its trainers, ___ practicing hard.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular collective noun 'The team' (unit) requires the singular verb 'is'."
-  },
-  {
-    question: "'The Arabian Nights', along with its sequels, ___ full of wonders.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular title 'The Arabian Nights' requires the singular verb 'is'."
-  },
-  {
-    question: "Everything, together with the documents, ___ ready for the audit.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular indefinite pronoun 'Everything' requires the singular verb 'is'."
-  },
-  {
-    question: "The manager, not his assistants, ___ responsible.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular affirmative subject 'The manager' requires the singular verb 'is'."
-  },
-  {
-    question: "The principal, as well as her deputy, ___ bound to come.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The principal' requires the singular verb 'is'."
-  },
-  {
-    question: "One of the earliest things I remember, including the sound of the bells, ___ my third birthday.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'One' requires the singular verb 'is'."
-  },
-  {
-    question: "My family, along with my crazy cousins, ___ to the store.",
-    options: ["walk", "walking", "walked", "walks"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular collective noun 'My family' requires the singular verb 'walks'."
-  },
-  {
-    question: "The list of rules, including all the exceptions, ___ confusing.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The list' requires the singular verb 'is'."
-  },
-  {
-    question: "Each plant, along with the shrub, ___ watered this morning.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular marker 'Each' makes the subject singular, requiring 'was'."
-  },
-  {
-    question: "The woman, with all the dogs, ___ down my street.",
-    options: ["walk", "walking", "walked", "walks"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular subject 'The woman' requires the singular verb 'walks'."
-  },
-  {
-    question: "The advice from the senior colleagues, as well as the manual, ___ invaluable.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The uncountable subject 'The advice' (singular) requires 'is'."
-  },
-  {
-    question: "The captain, as well as the players, ___ anxious.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The captain' requires the singular verb 'is'."
-  },
-  {
-    question: "The problem, along with its various solutions, ___ taxes.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The problem' requires the singular linking verb 'is'."
-  },
-  {
-    question: "A driver's license, together with two other pieces of identification, ___ required.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'A driver's license' requires the singular verb 'is'."
-  },
-  {
-    question: "The analysis of the various scenarios, including the worst case, ___ presented yesterday.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The analysis' requires the singular past auxiliary 'was'."
-  },
-  {
-    question: "The manager, not his team, ___ the final decision.",
-    options: ["make", "making", "made", "makes"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular affirmative subject 'The manager' requires the singular verb 'makes'."
-  },
-  {
-    question: "The data, along with the graphs, ___ being analyzed.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The data' (commonly treated as uncountable) requires the singular verb 'is'."
-  },
-  {
-    question: "The book, as well as the notes, ___ on the desk.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The book' requires the singular verb 'is'."
-  },
-  {
-    question: "The research that ___ the hypothesis ___ preliminary.",
-    options: ["support / are", "supports / is", "support / is", "supports / are"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "The singular subject 'The research' requires 'is', and the antecedent 'research' requires 'supports'."
-  },
-  {
-    question: "The rhythm of the pounding waves ___ calming.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The rhythm' requires the singular verb 'is'."
-  },
-  {
-    question: "The principal, accompanied by his wife, ___ traveling to India.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The Principal' requires the singular verb 'is'."
-  },
-  {
-    question: "The dog, with all the puppies, ___ to the park.",
-    options: ["run", "running", "ran", "runs"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular subject 'The dog' requires the singular verb 'runs'."
-  },
-  {
-    question: "Every man and woman, including the children, ___ required to check in.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The marker 'Every' makes the subject singular, requiring 'is'."
-  },
-  {
-    question: "The manager, as well as his staff, ___ reviewing the policy.",
-    options: ["review", "reviewing", "reviewed", "reviews"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "The singular subject 'The manager' requires the singular verb 'reviews'."
-  },
-  {
-    question: "The owner and manager (one person), along with the employee, ___ speaking.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The owner and manager' (single unit) requires 'is'."
-  },
-  {
-    question: "The two kittens and the mother cat, along with their toys, ___ hiding in the room.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The plural compound subject 'The two kittens and the mother cat' requires 'are'."
-  },
-  {
-    question: "One of the boxes, containing old photographs, ___ open.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'One' requires 'is', ignoring the intervening clause."
-  },
-  {
-    question: "The chairman, along with the delegates, ___ expected shortly.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The chairman' requires the singular verb 'is'."
-  },
-  {
-    question: "The list of names, including the reserves, ___ checked.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The list' requires the singular past auxiliary 'was'."
-  },
-  {
-    question: "The principal, not the vice-principal, ___ approved the budget.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "The singular affirmative subject 'The principal' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The report, as well as the memos, ___ been finalized.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The report' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The teacher, together with the administrator, ___ the plan.",
-    options: ["drafts", "draft", "drafting", "drafted"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The teacher' requires the singular verb 'drafts'."
-  },
-  {
-    question: "The student, with his older brother, ___ going abroad.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The student' requires the singular verb 'is'."
-  },
-  {
-    question: "The owner, not the tenants, ___ responsible for maintenance.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular affirmative subject 'The owner' requires the singular verb 'is'."
-  },
-  {
-    question: "The problem, as well as the solution, ___ complex.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The problem' requires the singular verb 'is'."
-  },
-  {
-    question: "The captain, along with the players, ___ the meeting.",
-    options: ["attends", "attend", "attending", "attended"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The captain' requires the singular verb 'attends'."
-  },
-  {
-    question: "The rhythm of the dancers' feet ___ captivating.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The rhythm' requires the singular verb 'is'."
-  },
-  {
-    question: "The book, including its dedication, ___ printed in error.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The book' requires the singular past auxiliary 'was'."
-  },
-  {
-    question: "The family, as well as the staff, ___ attending the party.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular collective noun 'The family' (unit) requires 'is'."
-  },
-  {
-    question: "The Principal, along with his deputy, ___ expected shortly.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The Principal' requires the singular verb 'is'."
-  },
-  {
-    question: "The mayor, together with the council members, ___ the speech.",
-    options: ["delivers", "deliver", "delivering", "delivered"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "The singular subject 'The mayor' requires the singular verb 'delivers'."
-  },
-  {
-    question: "The cost of all these articles ___ risen.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "The singular subject 'The cost' requires the singular auxiliary 'has'."
-  },
-  {
-    question: "The sound of the chimes, accompanied by the laughter, ___ gentle.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The sound' requires the singular past auxiliary 'was'."
-  },
-  {
-    question: "The woman, as well as the students, ___ late.",
-    options: ["were", "are", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The woman' requires the singular verb 'is'."
-  },
-  {
-    question: "The manager, not his subordinates, ___ reviewing the files.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular affirmative subject 'The manager' requires the singular verb 'is'."
-  },
-  {
-    question: "The building, together with the surrounding grounds, ___ beautiful.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "The singular subject 'The building' requires the singular verb 'is'."
-  }
+  // C. Hard Level
+  { question: "Running with ducks ___ my favorite sport.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'with ducks'; the singular gerund 'Running' requires 'is'." },
+  { question: "The research that supports the hypothesis ___ preliminary.", options: ["support", "supporting", "supported", "supports"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore the relative clause; the singular antecedent 'research' requires 'supports'." },
+  { question: "Hiding your mistakes ___ not make them go away.", options: ["do", "does", "don't", "doesn't"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'your mistakes'; the singular gerund 'Hiding' requires 'does'." },
+  { question: "The list of available courses, including the online options, ___ published. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 7: Ignore 'of available courses...'; the singular subject 'list' requires 'was'." },
+  { question: "The team, along with its trainers, ___ practicing hard.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'along with its trainers'; the singular subject 'team' requires 'is'." },
+  { question: "\"The Arabian Nights\" ___ full of wonders.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore the plural form of the title; 'The Arabian Nights' (singular book) requires 'is'." },
+  { question: "One of the most effective ways to study ___ practice.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the most effective ways...'; the singular subject 'One' requires 'is'." },
+  { question: "The sound of the rain hitting the glass ___ soothing.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the rain...'; the singular subject 'sound' requires 'is'." },
+  { question: "The Principal, not the students, ___ responsible. (Past Tense)", options: ["are", "were", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'not the students'; the singular subject 'Principal' requires 'was'." },
+  { question: "The data that ___ collected during the experiment support the hypothesis.", options: ["was", "were", "is", "has been"], correct: 1, difficulty: "hard", explanation: "Rule 7: The relative clause modifies 'data' (plural context), requiring 'were'." },
+  { question: "The analyst, together with the senior advisors, ___ reviewing the policy.", options: ["review", "reviewing", "reviewed", "is reviewing"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'together with...'; the singular subject 'analyst' requires 'is reviewing'." },
+  { question: "Each of the candidates who applied ___ a unique skill set.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'of the candidates...'; the singular subject 'Each' requires 'has'." },
+  { question: "Each of the complex rules ___ easily memorable.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the complex rules'; the singular subject 'Each' requires 'is'." },
+  { question: "The difficulty of the assignments ___ increasing.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the assignments'; the singular subject 'difficulty' requires 'is'." },
+  { question: "The boy or his friends ___ every day. (Proximity)", options: ["runs", "running", "ran", "run"], correct: 3, difficulty: "hard", explanation: "Rule 7: In 'or' phrases, ignore the subject further away ('The boy'). Agree with nearest ('friends')." },
+  { question: "Each of the solutions proposed in the document ___ a dedicated chapter.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'of the solutions...'; the singular subject 'Each' requires 'has'." },
+  { question: "The woman, with the three small children, ___ looking tired.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'with the three small children'; the singular subject 'woman' requires 'is'." },
+  { question: "There ___ a pen and two pencils on the desk. (Inversion)", options: ["is", "are", "was", "were"], correct: 0, difficulty: "hard", explanation: "Rule 7: In 'There is/are', ignore subjects after the first one ('and two pencils'). Agree with 'a pen'." },
+  { question: "The student who ___ hard ___ succeed.", options: ["study / will", "studies / will", "study / are", "studies / are"], correct: 1, difficulty: "hard", explanation: "Rule 7: Relative clause verb agrees with antecedent 'student' (singular) -> 'studies'." },
+  { question: "The list of necessary supplies ___ longer than expected. (Past Tense)", options: ["are", "were", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of necessary supplies'; the singular subject 'list' requires 'was'." },
+  { question: "To run five miles ___ my goal.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Infinitive phrase is singular; ignore the plural noun 'miles' within it." },
+  { question: "Every man, woman, and child ___ the right to be heard.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: 'Every' makes the list singular; ignore the apparent plurality." },
+  { question: "The book that ___ reviews sells well.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Relative clause agrees with 'book' (singular), requiring 'has'." },
+  { question: "The quality of the baked goods ___ not depend on the quantity.", options: ["do", "does", "don't", "doesn't"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'of the baked goods'; singular 'quality' requires 'doesn't'." },
+  { question: "There ___ many reasons for his success.", options: ["is", "was", "are", "has been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Inversion. The subject 'reasons' is plural, requiring 'are'." },
+  { question: "The manager, not his assistants, ___ responsible.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore the negative phrase 'not his assistants'; agree with 'manager'." },
+  { question: "The rhythm of the dancer's feet ___ captivating.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the dancer's feet'; singular 'rhythm' requires 'is'." },
+  { question: "The students who ___ hard succeed.", options: ["study", "studies", "studying", "studied"], correct: 0, difficulty: "hard", explanation: "Rule 7: Relative clause agrees with antecedent 'students' (plural) -> 'study'." },
+  { question: "Each ticket, along with the information booklet, ___ twenty pounds.", options: ["cost", "costing", "costed", "costs"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'along with...'; singular 'Each ticket' requires 'costs'." },
+  { question: "The principal, along with the students, ___ the meeting.", options: ["attend", "attending", "attended", "attends"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'along with the students'; singular 'principal' requires 'attends'." },
+  { question: "The effects of the new law ___ not yet known.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 7: Ignore 'of the new law'; plural 'effects' requires 'are'." },
+  { question: "One of the real problems ___ a lack of oversight.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the real problems'; singular 'One' requires 'is'." },
+  { question: "The sound of the instruments ___ muffled by the distance. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the instruments'; singular 'sound' requires 'was'." },
+  { question: "The teacher, as well as the students, ___ praised. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'as well as the students'; singular 'teacher' requires 'was'." },
+  { question: "The number of applicants ___ increased this year.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'of applicants'; singular 'The number' requires 'has'." },
+  { question: "Reading novels ___ imagination.", options: ["broaden", "broadening", "broadened", "broadens"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'novels'; singular gerund 'Reading' requires 'broadens'." },
+  { question: "The bouquet of dried herbs ___ been preserved perfectly.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'of dried herbs'; singular 'bouquet' requires 'has'." },
+  { question: "To bake bread for the entire village ___ immense preparation.", options: ["require", "requiring", "required", "requires"], correct: 3, difficulty: "hard", explanation: "Rule 7: Ignore 'bread for the entire village'; singular infinitive 'To bake' requires 'requires'." },
+  { question: "The data ___ analyzed carefully.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Context implies singular mass noun usage here, requiring 'is'." },
+  { question: "There ___ the newspaper.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Inversion. Singular subject 'newspaper' requires 'is'." },
+  { question: "The advice from the senior colleagues ___ invaluable.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'from the senior colleagues'; singular 'advice' requires 'is'." },
+  { question: "The report on the new facilities ___ submitted yesterday.", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'on the new facilities'; singular 'report' requires 'was'." },
+  { question: "Each of the specialized tools ___ a dedicated space.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'of the specialized tools'; singular 'Each' requires 'has'." },
+  { question: "The student who ___ next door ___ a doctor.", options: ["live / is", "lives / is", "live / are", "lives / are"], correct: 1, difficulty: "hard", explanation: "Rule 7: Relative clause agrees with singular 'student' -> 'lives'." },
+  { question: "The team, as well as the coach, ___ playing well.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'as well as the coach'; singular 'team' requires 'is'." },
+  { question: "One of the largest challenges facing the world ___ hunger.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of the largest challenges...'; singular 'One' requires 'is'." },
+  { question: "The woman with all the keys ___ down the hall.", options: ["walk", "walks", "walking", "walked"], correct: 1, difficulty: "hard", explanation: "Rule 7: Ignore 'with all the keys'; singular 'woman' requires 'walks'." },
+  { question: "What the team requested ___ been approved.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "hard", explanation: "Rule 7: Noun clause 'What the team requested' is singular, requiring 'has'." },
+  { question: "The Principal, with the students, ___ waiting for the bus.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'with the students'; singular 'Principal' requires 'is'." },
+  { question: "The list of names on the registration form ___ checked. (Past Tense)", options: ["were", "are", "was", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 7: Ignore 'of names...'; singular 'list' requires 'was'." }
 ];
