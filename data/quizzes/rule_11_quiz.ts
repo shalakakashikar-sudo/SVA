@@ -1,1060 +1,154 @@
-
 import type { QuizQuestion } from '../../types.ts';
 
 export const rule11Quiz: QuizQuestion[] = [
-  // A. Easy Level (50 Questions)
-  {
-    question: "All of the sugar ___ sweet.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Sugar is uncountable, requiring a singular verb."
-  },
-  {
-    question: "Some of the documents ___ missing.",
-    options: ["is", "was", "are", "has been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Documents is plural countable, requiring a plural verb."
-  },
-  {
-    question: "Most of the information ___ true.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Information is uncountable, requiring a singular verb."
-  },
-  {
-    question: "A lot of the people ___ left the room.",
-    options: ["have", "has", "is", "are"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "People is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "All of the cake ___ gone.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Cake is uncountable, requiring a singular verb."
-  },
-  {
-    question: "Some of the students ___ improving their writing.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Students is plural countable, requiring a plural verb."
-  },
-  {
-    question: "Most of the energy ___ lost during the transfer.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Energy is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "All of the cookies ___ delicious.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Cookies is plural countable, requiring a plural verb."
-  },
-  {
-    question: "Some of the cake ___ been eaten.",
-    options: ["have", "has", "are", "is"],
-    correct: 1,
-    difficulty: "easy",
-    explanation: "Cake is uncountable, requiring the singular auxiliary has."
-  },
-  {
-    question: "A lot of the water ___ spilled.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Water is uncountable (singular), requiring the singular auxiliary has."
-  },
-  {
-    question: "Most of the students ___ present.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Students is plural countable, requiring a plural verb."
-  },
-  {
-    question: "All of the books ___ accounted for.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Books is plural countable, requiring the plural verb were."
-  },
-  {
-    question: "Some of the feedback ___ helpful.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Feedback is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "A lot of the traffic ___ directed away from the city centre.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Traffic is usually uncountable, requiring a singular verb."
-  },
-  {
-    question: "All of the effort ___ appreciated.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Effort is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Most of the milk ___ cold.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Milk is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Some of the cars ___ parked illegally.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Cars is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "A lot of the time ___ spent waiting.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Time is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "All of the mistakes ___ minor.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Mistakes is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Most of the articles ___ published online.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Articles is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Some of the boxes ___ empty.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Boxes is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "A lot of the documents ___ stored digitally.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Documents is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "All of the furniture ___ expensive.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Furniture is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Most of the juice ___ made from fresh fruit.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Juice is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Some of the water ___ clean.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Water is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "All of the money ___ been accounted for.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Money is uncountable (singular), requiring the singular auxiliary has."
-  },
-  {
-    question: "A lot of the equipment ___ updated last year.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Equipment is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Most of the pencils ___ sharpened.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Pencils is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Some of the customers ___ complained about the service.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Customers is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "All of the luggage ___ checked in.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Luggage is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "A lot of the apples ___ rotten.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Apples is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "Most of the oil ___ contaminated.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Oil is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Some of the employees ___ working remotely.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Employees is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "All of the music ___ beautiful.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Music is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Most of the research ___ preliminary.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Research is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "A lot of the space ___ empty.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Space is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "All of the students ___ excited for the holiday.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Students is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "Most of the chairs ___ taken.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Chairs is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Some of the furniture ___ damaged.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Furniture is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "A lot of the advice ___ useful.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Advice is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "All of the reports ___ submitted on time.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Reports is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Most of the poetry ___ well-known.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Poetry is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Some of the desks ___ reserved.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Desks is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "A lot of the problems ___ been solved.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Problems is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "All of the wood ___ wet after the rain.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Wood is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Most of the money ___ spent on marketing.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Money is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "Some of the soil ___ contaminated.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "easy",
-    explanation: "Soil is uncountable (singular), requiring a singular verb."
-  },
-  {
-    question: "A lot of the luggage ___ been checked in.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Luggage is uncountable (singular), requiring the singular auxiliary has."
-  },
-  {
-    question: "All of the teams ___ practicing hard.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Teams is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "Most of the tea ___ grown in China.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "easy",
-    explanation: "Tea is uncountable (singular), requiring a singular verb."
-  },
+  // A. Easy Level
+  { question: "All of the sugar ___ sweet.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Sugar' is uncountable, requiring the singular verb 'is'." },
+  { question: "Some of the documents ___ missing.", options: ["is", "was", "are", "has been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Documents' is plural countable, requiring the plural verb 'are'." },
+  { question: "Most of the information ___ true.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Information' is uncountable, requiring the singular verb 'is'." },
+  { question: "A lot of the people ___ left the room.", options: ["have", "has", "is", "are"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'People' is plural countable, requiring the plural auxiliary 'have'." },
+  { question: "All of the cake ___ gone.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Cake' is uncountable here, requiring the singular verb 'is'." },
+  { question: "Some of the students ___ improving their writing.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Students' is plural countable, requiring the plural verb 'are'." },
+  { question: "Most of the energy ___ lost during the transfer.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Energy' is uncountable, requiring the singular verb 'is'." },
+  { question: "All of the cookies ___ delicious.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Cookies' is plural countable, requiring the plural verb 'are'." },
+  { question: "Some of the cake ___ been eaten.", options: ["have", "has", "are", "is"], correct: 1, difficulty: "easy", explanation: "Rule 11: 'Cake' is uncountable, requiring the singular auxiliary 'has'." },
+  { question: "A lot of the water ___ spilled. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Water' is uncountable, requiring the singular verb 'was'." },
+  { question: "Most of the students ___ present.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Students' is plural countable, requiring the plural verb 'are'." },
+  { question: "All of the books ___ accounted for. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Books' is plural countable, requiring the plural verb 'were'." },
+  { question: "Some of the feedback ___ helpful.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Feedback' is uncountable, requiring the singular verb 'is'." },
+  { question: "A lot of the traffic ___ directed away. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Traffic' is uncountable, requiring the singular verb 'was'." },
+  { question: "All of the effort ___ appreciated. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Effort' is uncountable, requiring the singular verb 'was'." },
+  { question: "Most of the milk ___ cold.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Milk' is uncountable, requiring the singular verb 'is'." },
+  { question: "Some of the cars ___ parked illegally. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Cars' is plural countable, requiring the plural verb 'were'." },
+  { question: "A lot of the time ___ spent waiting. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Time' is uncountable, requiring the singular verb 'was'." },
+  { question: "All of the mistakes ___ minor. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Mistakes' is plural countable, requiring the plural verb 'were'." },
+  { question: "Most of the articles ___ published online. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Articles' is plural countable, requiring the plural verb 'were'." },
+  { question: "Some of the boxes ___ empty.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Boxes' is plural countable, requiring the plural verb 'are'." },
+  { question: "A lot of the documents ___ stored digitally.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Documents' is plural countable, requiring the plural verb 'are'." },
+  { question: "All of the furniture ___ expensive.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Furniture' is uncountable, requiring the singular verb 'is'." },
+  { question: "Most of the juice ___ made from fresh fruit.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Juice' is uncountable, requiring the singular verb 'is'." },
+  { question: "Some of the water ___ clean.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Water' is uncountable, requiring the singular verb 'is'." },
+  { question: "All of the money ___ been accounted for.", options: ["has", "have", "are", "is"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Money' is uncountable, requiring the singular auxiliary 'has'." },
+  { question: "A lot of the equipment ___ updated last year.", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Equipment' is uncountable, requiring the singular verb 'was'." },
+  { question: "Most of the pencils ___ sharpened. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Pencils' is plural countable, requiring the plural verb 'were'." },
+  { question: "Some of the customers ___ complained about the service.", options: ["have", "has", "are", "is"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Customers' is plural countable, requiring the plural auxiliary 'have'." },
+  { question: "All of the luggage ___ checked in. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Luggage' is uncountable, requiring the singular verb 'was'." },
+  { question: "A lot of the apples ___ rotten.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Apples' is plural countable, requiring the plural verb 'are'." },
+  { question: "Most of the oil ___ contaminated.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Oil' is uncountable, requiring the singular verb 'is'." },
+  { question: "Some of the employees ___ working remotely.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Employees' is plural countable, requiring the plural verb 'are'." },
+  { question: "All of the music ___ beautiful.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Music' is uncountable, requiring the singular verb 'is'." },
+  { question: "Most of the research ___ preliminary.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Research' is uncountable, requiring the singular verb 'is'." },
+  { question: "A lot of the space ___ empty.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Space' is uncountable, requiring the singular verb 'is'." },
+  { question: "All of the students ___ excited for the holiday.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Students' is plural countable, requiring the plural verb 'are'." },
+  { question: "Most of the chairs ___ taken. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Chairs' is plural countable, requiring the plural verb 'were'." },
+  { question: "Some of the furniture ___ damaged. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Furniture' is uncountable, requiring the singular verb 'was'." },
+  { question: "A lot of the advice ___ useful.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Advice' is uncountable, requiring the singular verb 'is'." },
+  { question: "All of the reports ___ submitted on time. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Reports' is plural countable, requiring the plural verb 'were'." },
+  { question: "Most of the poetry ___ well-known.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Poetry' is uncountable, requiring the singular verb 'is'." },
+  { question: "Some of the desks ___ reserved.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Desks' is plural countable, requiring the plural verb 'are'." },
+  { question: "A lot of the problems ___ been solved.", options: ["have", "has", "is", "was"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Problems' is plural countable, requiring the plural auxiliary 'have'." },
+  { question: "All of the wood ___ wet after the rain.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Wood' is uncountable, requiring the singular verb 'is'." },
+  { question: "Most of the money ___ spent on marketing. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Money' is uncountable, requiring the singular verb 'was'." },
+  { question: "Some of the soil ___ contaminated.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "easy", explanation: "Rule 11: 'Soil' is uncountable, requiring the singular verb 'is'." },
+  { question: "A lot of the luggage ___ been checked in.", options: ["has", "have", "are", "is"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Luggage' is uncountable, requiring the singular auxiliary 'has'." },
+  { question: "All of the teams ___ practicing hard.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Teams' is plural countable, requiring the plural verb 'are'." },
+  { question: "Most of the tea ___ grown in China.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "easy", explanation: "Rule 11: 'Tea' is uncountable, requiring the singular verb 'is'." },
 
-  // B. Medium Level (50 Questions)
-  {
-    question: "None of the work ___ completed.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Work is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the boys ___ absent.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Boys is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "Much of the sugar ___ sold.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Sugar is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Part of the roof ___ damaged in the storm.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Roof is singular countable, requiring the singular past verb was."
-  },
-  {
-    question: "None of the sentences ___ punctuated correctly.",
-    options: ["was", "were", "is", "has been"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "Sentences is plural countable, allowing the plural verb were."
-  },
-  {
-    question: "Half of the village ___ flooded.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Village is singular countable, requiring the singular past verb was."
-  },
-  {
-    question: "Much of the planning ___ yet to be done.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Planning is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Part of the documents ___ missing.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Documents is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "None of the milk ___ cold.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Milk is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the apples ___ rotten.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Apples is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "None of the contestants ___ able to answer the final question.",
-    options: ["was", "were", "is", "has been"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "Contestants is plural countable, requiring the plural verb were."
-  },
-  {
-    question: "Part of the profits ___ shared among the staff.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Profits is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Much of the excitement ___ caused by nervousness.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Excitement is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the information ___ incorrect.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Information is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Part of the money ___ spent on repairs.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Money is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "None of the pies ___ gone.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Pies is plural. Singular has is an acceptable, precise form of agreement with None."
-  },
-  {
-    question: "All of the documents ___ contain the budget proposal.",
-    options: ["do", "does", "has", "have"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "Documents is plural countable, requiring the plural auxiliary have (or do in simple present)."
-  },
-  {
-    question: "Much of the data ___ confusing.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Data is often treated as singular/uncountable, requiring is."
-  },
-  {
-    question: "None of the computers ___ working.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Computers is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "Half of the documents ___ misplaced.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Documents is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Part of the success ___ due to luck.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Success is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Much of the blame ___ placed on the manager.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Blame is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "None of the problems ___ simple.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Problems is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "All of the students ___ to the same destination.",
-    options: ["walk", "walking", "walked", "walk"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "Students is plural countable, requiring the plural base verb walk."
-  },
-  {
-    question: "Half of the staff ___ agreed to the proposal (Unit).",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Staff (as a single unit) is singular, requiring the singular auxiliary has."
-  },
-  {
-    question: "Much of the progress ___ due to teamwork.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Progress is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "None of the cookies ___ chocolate chips.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Cookies is plural. Singular has is an acceptable form of agreement with None."
-  },
-  {
-    question: "Part of the evidence ___ inadmissible in court.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Evidence is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "A lot of the noise ___ coming from outside.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Noise is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the time ___ dedicated to practice.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Time is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "None of the animals ___ to be released into the wild.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Animals is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Much of the planning ___ yet to be done.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "medium",
-    explanation: "Planning is uncountable (singular), requiring is."
-  },
-  {
-    question: "Part of the population ___ against the bill (Unit).",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Population (acting as a unit) requires the singular verb was."
-  },
-  {
-    question: "All of the students ___ to the exam hall.",
-    options: ["walk", "walking", "walked", "walk"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "Students is plural countable, requiring the plural base verb walk."
-  },
-  {
-    question: "None of the teachers ___ to follow the director's advice.",
-    options: ["agrees", "agree", "were agreed", "have agreed"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Teachers is plural. Singular agrees is provided as an acceptable usage of None."
-  },
-  {
-    question: "Half of the classes ___ cancelled due to snow.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Classes is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "Part of the job ___ travelling.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Job is singular countable, requiring is."
-  },
-  {
-    question: "Much of the research ___ preliminary.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Research is uncountable (singular), requiring is."
-  },
-  {
-    question: "None of the food ___ eaten.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Food is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "Half of the sugar ___ wasted.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Sugar is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "Part of the expenses ___ covered by the company.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Expenses is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "None of the arguments ___ the central thesis.",
-    options: ["refute", "refuting", "refuted", "refutes"],
-    correct: 3,
-    difficulty: "medium",
-    explanation: "Arguments is plural. Singular refutes is an acceptable, precise form of agreement with None."
-  },
-  {
-    question: "A lot of the paperwork ___ been misplaced.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Paperwork is uncountable (singular), requiring the singular auxiliary has."
-  },
-  {
-    question: "Most of the customers ___ satisfied with the product.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Customers is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "All of the teams ___ practicing hard.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Teams is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "None of the cars ___ been found.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Cars is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "Half of the students ___ not attend the assembly.",
-    options: ["do", "does", "has", "have"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Students is plural countable, requiring the plural auxiliary do."
-  },
-  {
-    question: "Part of the population ___ against the bill (Individuals).",
-    options: ["was", "were", "is", "has been"],
-    correct: 1,
-    difficulty: "medium",
-    explanation: "Population (acting as individuals) requires the plural verb were."
-  },
-  {
-    question: "Much of the data ___ gathered today.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Data is commonly treated as singular/uncountable, requiring is."
-  },
-  {
-    question: "All of the students ___ excited for the holiday.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "medium",
-    explanation: "Students is plural countable, requiring the plural verb are."
-  },
+  // B. Medium Level
+  { question: "None of the work ___ completed.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Work' is uncountable, requiring singular 'is'." },
+  { question: "Half of the boys ___ absent.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Boys' is plural, requiring plural 'are'." },
+  { question: "Much of the sugar ___ sold.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Sugar' is uncountable, requiring singular 'is'." },
+  { question: "Part of the roof ___ damaged in the storm. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Roof' is singular countable, requiring singular 'was'." },
+  { question: "None of the sentences ___ punctuated correctly. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Sentences' is plural, requiring plural 'were'." },
+  { question: "Half of the village ___ flooded. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Village' is singular countable, requiring singular 'was'." },
+  { question: "Much of the planning ___ yet to be done.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Planning' is uncountable, requiring singular 'is'." },
+  { question: "Part of the documents ___ missing.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Documents' is plural, requiring plural 'are'." },
+  { question: "None of the milk ___ cold.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Milk' is uncountable, requiring singular 'is'." },
+  { question: "Half of the apples ___ rotten. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Apples' is plural, requiring plural 'were'." },
+  { question: "None of the contestants ___ able to answer. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Contestants' is plural, requiring plural 'were'." },
+  { question: "Part of the profits ___ shared among the staff. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Profits' is plural, requiring plural 'were'." },
+  { question: "Much of the excitement ___ caused by nervousness.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Excitement' is uncountable, requiring singular 'is'." },
+  { question: "Half of the information ___ incorrect.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Information' is uncountable, requiring singular 'is'." },
+  { question: "Part of the money ___ spent on repairs. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Money' is uncountable, requiring singular 'was'." },
+  { question: "None of the pies ___ gone.", options: ["are", "is", "has", "have"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Pies' is plural, requiring plural 'are'." },
+  { question: "All of the documents ___ the budget proposal.", options: ["contain", "contains", "containing", "contained"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Documents' is plural, requiring base verb 'contain'." },
+  { question: "Much of the data ___ confusing.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Data' is treated as singular/uncountable here, requiring 'is'." },
+  { question: "None of the computers ___ working.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Computers' is plural, requiring plural 'are'." },
+  { question: "Half of the documents ___ misplaced. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Documents' is plural, requiring plural 'were'." },
+  { question: "Part of the success ___ due to luck.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Success' is uncountable, requiring singular 'is'." },
+  { question: "Much of the blame ___ placed on the manager. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Blame' is uncountable, requiring singular 'was'." },
+  { question: "None of the problems ___ simple.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Problems' is plural, requiring plural 'are'." },
+  { question: "All of the students ___ to the same destination.", options: ["walk", "walking", "walked", "walks"], correct: 3, difficulty: "medium", explanation: "Rule 11: 'Students' is plural, requiring base verb 'walk' (Present Simple)." },
+  { question: "Half of the staff ___ agreed to the proposal (as a unit).", options: ["has", "have", "are", "is"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Staff' acting as a single unit is singular, requiring 'has'." },
+  { question: "Much of the progress ___ due to teamwork.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "medium", explanation: "Rule 11: 'Progress' is uncountable, requiring singular 'is'." },
+  { question: "None of the cookies ___ chocolate chips.", options: ["have", "has", "are", "is"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Cookies' is plural, requiring plural 'have'." },
+  { question: "Part of the evidence ___ inadmissible in court.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Evidence' is uncountable, requiring singular 'is'." },
+  { question: "A lot of the noise ___ coming from outside.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Noise' is uncountable, requiring singular 'is'." },
+  { question: "Half of the time ___ dedicated to practice. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Time' is uncountable, requiring singular 'was'." },
+  { question: "None of the animals ___ to be released. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Animals' is plural, requiring plural 'were'." },
+  { question: "Part of the population ___ against the bill (acting as a unit).", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Population' as a unit is singular, requiring 'was'." },
+  { question: "None of the teachers ___ to follow the advice.", options: ["agree", "agrees", "were agreed", "have agreed"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Teachers' is plural, requiring plural verb 'agree'." },
+  { question: "Half of the classes ___ cancelled due to snow. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Classes' is plural, requiring plural 'were'." },
+  { question: "Part of the job ___ travelling.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Job' is singular countable, requiring 'is'." },
+  { question: "None of the food ___ eaten. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Food' is uncountable, requiring singular 'was'." },
+  { question: "Half of the sugar ___ wasted. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Sugar' is uncountable, requiring singular 'was'." },
+  { question: "Part of the expenses ___ covered by the company. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Expenses' is plural, requiring plural 'were'." },
+  { question: "None of the arguments ___ the central thesis.", options: ["refute", "refuting", "refuted", "refutes"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Arguments' is plural, requiring plural verb 'refute'." },
+  { question: "A lot of the paperwork ___ been misplaced.", options: ["has", "have", "are", "is"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Paperwork' is uncountable, requiring singular 'has'." },
+  { question: "Most of the customers ___ satisfied. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Customers' is plural, requiring plural 'were'." },
+  { question: "None of the cars ___ been found.", options: ["have", "has", "are", "is"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Cars' is plural, requiring plural 'have'." },
+  { question: "Half of the students ___ not attend the assembly. (Present Tense)", options: ["do", "does", "has", "have"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Students' is plural, requiring plural 'do'." },
+  { question: "Part of the population ___ against the bill (acting as individuals).", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Population' acting as individuals is plural, requiring 'were'." },
+  { question: "Much of the data ___ gathered today.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "medium", explanation: "Rule 11: 'Data' (mass) is singular, requiring 'is'." },
 
-  // C. Hard Level (50 Questions)
-  {
-    question: "Two-thirds of the pizza ___ gone.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Pizza is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Two-thirds of the students ___ present.",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Students is plural countable, requiring the plural verb are."
-  },
-  {
-    question: "75% of the work ___ completed.",
-    options: ["has been", "have been", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Work is uncountable (singular), requiring the singular auxiliary has been."
-  },
-  {
-    question: "40% of the people ___ not support the new law.",
-    options: ["does", "do", "has", "is"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "People is plural countable, requiring the plural auxiliary do."
-  },
-  {
-    question: "None of my furniture ___ damaged in the fire.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Furniture is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "All of the sugar and butter ___ required for the recipe.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Sugar and butter are both uncountable mass nouns, making the compound subject singular."
-  },
-  {
-    question: "Most of the advice offered ___ useful.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Advice is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the earnings ___ been spent on debt repayment.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Earnings is a plural countable noun, requiring the plural auxiliary have."
-  },
-  {
-    question: "None of the ideas ___ worth attention.",
-    options: ["is", "was", "has been", "are"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "Ideas is plural countable, making the plural verb are acceptable."
-  },
-  {
-    question: "Part of the research that ___ conducted ___ conclusive.",
-    options: ["was / were", "was / was", "were / was", "were / were"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Research is uncountable (singular), requiring was in both clauses."
-  },
-  {
-    question: "All of the money that ___ in the safe ___ gone.",
-    options: ["was / were", "was / is", "were / was", "is / are"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Money is uncountable (singular), requiring was and is."
-  },
-  {
-    question: "80% of the students who ___ in the race ___ from this school.",
-    options: ["run / is", "run / are", "runs / is", "runs / are"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Students (plural) dictates the plural relative clause verb run and the main verb are."
-  },
-  {
-    question: "None of the trees in the garden ___ fruit.",
-    options: ["bear", "bearing", "bore", "bears"],
-    correct: 3,
-    difficulty: "hard",
-    explanation: "Trees is plural. Singular bears is acceptable usage for None."
-  },
-  {
-    question: "Most of her friends who ___ to travel ___ at home.",
-    options: ["loves / is", "love / are", "loves / are", "love / is"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Friends (plural) requires the plural relative clause verb love and the plural main verb are."
-  },
-  {
-    question: "Half of the cookies that ___ chocolate chips ___ delicious.",
-    options: ["contain / are", "contains / is", "contain / is", "contains / are"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Cookies (plural) requires the plural verb contain and the plural main verb are."
-  },
-  {
-    question: "Most of the data ___ accurate.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Data is commonly treated as singular/uncountable, requiring is."
-  },
-  {
-    question: "Half of the trousers ___ been mended.",
-    options: ["have", "has", "is", "was"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Trousers is a plural-by-default noun, requiring the plural auxiliary have."
-  },
-  {
-    question: "A lot of the information ___ gathered yesterday.",
-    options: ["was", "were", "are", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Information is uncountable (singular), requiring the singular verb was."
-  },
-  {
-    question: "Three-fourths of the cities ___ ruined.",
-    options: ["was", "is", "were", "has been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Cities is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "One-third of the city ___ unemployed.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "City is singular countable, requiring the singular verb is."
-  },
-  {
-    question: "All of the jewellery ___ stolen.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Jewellery (uncountable, singular) requires the singular verb was."
-  },
-  {
-    question: "Most of the research that ___ conducted ___ conclusive.",
-    options: ["was / were", "was / was", "were / was", "were / were"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Research is uncountable (singular), requiring was in both clauses."
-  },
-  {
-    question: "Half of the staff ___ at the meeting now (Individuals).",
-    options: ["are", "is", "was", "has been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Staff (acting as individuals) is plural, requiring are."
-  },
-  {
-    question: "None of the luggage ___ checked in yet.",
-    options: ["has been", "have been", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Luggage is uncountable (singular), requiring the singular auxiliary has been."
-  },
-  {
-    question: "All of the milk and cheese ___ required for the recipe.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Milk and cheese are uncountable, forming a singular unit."
-  },
-  {
-    question: "Most of the committee ___ decided on the proposal (Unit).",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Committee (unit) is singular, requiring the singular auxiliary has."
-  },
-  {
-    question: "None of the teachers who ___ trained ___ available now.",
-    options: ["are / are", "is / is", "is / are", "are / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Teachers is plural. Plural are is used in both clauses, following the plural noun."
-  },
-  {
-    question: "Half of the profits that ___ earned _ reinvested.",
-    options: ["were / are", "was / is", "were / is", "was / are"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Profits is plural countable, requiring the plural verbs were and are."
-  },
-  {
-    question: "Part of the water that ___ collected ___ potable.",
-    options: ["was / is", "were / are", "was / were", "were / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Water is uncountable (singular), requiring was and is."
-  },
-  {
-    question: "A lot of the students who ___ registered ___ from abroad.",
-    options: ["are / are", "is / is", "are / is", "is / are"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Students (plural) requires are in both cases."
-  },
-  {
-    question: "Much of the music ___ unbearable.",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Music is uncountable (singular), requiring was."
-  },
-  {
-    question: "All of the items that ___ been ordered ___ delivered.",
-    options: ["have / been", "has / been", "are / is", "is / are"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Items is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "None of the equipment ___ working.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Equipment is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Half of the resources that ___ allocated ___ sufficient.",
-    options: ["was / is", "were / are", "was / were", "were / is"],
-    correct: 1,
-    difficulty: "hard",
-    explanation: "Resources is plural countable, requiring the plural verbs were and are."
-  },
-  {
-    question: "Most of the data supporting the hypothesis ___ sound.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Data (singular/uncountable) requires is."
-  },
-  {
-    question: "All of the documents, except one, ___ finalized.",
-    options: ["were", "was", "is", "has been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Documents is plural countable, requiring the plural past verb were."
-  },
-  {
-    question: "None of the arguments ___ worth considering.",
-    options: ["are", "were", "is", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Arguments is plural. Singular is is acceptable, precise usage for None."
-  },
-  {
-    question: "A lot of the time we spend on revision ___ necessary.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Time is uncountable (singular), requiring the singular verb is."
-  },
-  {
-    question: "Part of the research team ___ delayed (team as unit).",
-    options: ["were", "are", "was", "have been"],
-    correct: 2,
-    difficulty: "hard",
-    explanation: "Research team (singular unit) requires was."
-  },
-  {
-    question: "Much of the effort that ___ expended ___ wasted.",
-    options: ["was / was", "were / were", "was / were", "were / was"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Effort is uncountable (singular), requiring was in both cases."
-  },
-  {
-    question: "All of the advice that ___ given ___ useful.",
-    options: ["was / is", "were / are", "was / were", "were / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Advice is uncountable (singular), requiring was and is."
-  },
-  {
-    question: "None of the teachers who ___ trained ___ available now.",
-    options: ["are / are", "is / is", "is / are", "are / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Teachers is plural. Plural are is used in both clauses."
-  },
-  {
-    question: "Half of the profits that ___ earned ___ reinvested.",
-    options: ["were / are", "was / is", "were / is", "was / are"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Profits is plural countable, requiring the plural verbs were and are."
-  },
-  {
-    question: "Most of the furniture that ___ bought ___ antique.",
-    options: ["was / is", "were / are", "was / were", "were / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Furniture is uncountable (singular), requiring was and is."
-  },
-  {
-    question: "None of the trousers ___ fit me.",
-    options: ["do", "does", "has", "have"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Trousers is a plural-by-default noun, requiring the plural auxiliary do."
-  },
-  {
-    question: "A lot of the money that ___ collected ___ gone.",
-    options: ["was / is", "were / are", "was / were", "were / is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Money is uncountable (singular), requiring was and is."
-  },
-  {
-    question: "Much of the effort ___ lost to friction.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Effort is uncountable (singular), requiring is."
-  },
-  {
-    question: "All of the milk ___ spilled.",
-    options: ["has", "have", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Milk is uncountable (singular), requiring the singular auxiliary has."
-  },
-  {
-    question: "Half of the countries in the world ___ been visited by the explorer.",
-    options: ["have", "has", "are", "is"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Countries is plural countable, requiring the plural auxiliary have."
-  },
-  {
-    question: "None of the equipment ___ working correctly.",
-    options: ["is", "are", "were", "have been"],
-    correct: 0,
-    difficulty: "hard",
-    explanation: "Equipment is uncountable (singular), requiring the singular verb is."
-  }
+  // C. Hard Level
+  { question: "Two-thirds of the pizza ___ gone.", options: ["are", "were", "is", "have been"], correct: 2, difficulty: "hard", explanation: "Rule 11: Fraction of singular 'pizza' requires singular 'is'." },
+  { question: "Two-thirds of the students ___ present.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: Fraction of plural 'students' requires plural 'are'." },
+  { question: "75% of the work ___ completed.", options: ["has been", "have been", "are", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: Percent of uncountable 'work' requires singular 'has been'." },
+  { question: "40% of the people ___ not support the new law.", options: ["do", "does", "has", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: Percent of plural 'people' requires plural 'do'." },
+  { question: "None of my furniture ___ damaged in the fire. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Furniture' is uncountable, requiring singular 'was'." },
+  { question: "All of the sugar and butter ___ required for the recipe.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: Two uncountable nouns joined by 'and' typically form a singular mass concept in this context." },
+  { question: "Most of the advice offered ___ useful.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Advice' is uncountable, requiring singular 'is'." },
+  { question: "Half of the earnings ___ been spent. (Plural Noun)", options: ["have", "has", "is", "was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Earnings' is plural, requiring plural 'have'." },
+  { question: "None of the ideas ___ worth attention.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Ideas' is plural, requiring plural 'are'." },
+  { question: "Part of the research that ___ conducted ___ conclusive.", options: ["was / was", "were / were", "were / was", "was / were"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Research' is uncountable, requiring singular 'was' in both clauses." },
+  { question: "All of the money that ___ in the safe ___ gone.", options: ["was / is", "were / are", "was / are", "is / are"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Money' is uncountable, requiring singular verbs." },
+  { question: "80% of the students who ___ in the race ___ from this school.", options: ["run / are", "runs / is", "run / is", "runs / are"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Students' is plural, requiring plural 'run' and 'are'." },
+  { question: "None of the trees in the garden ___ fruit. (Present Tense)", options: ["bear", "bears", "bearing", "bore"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Trees' is plural, requiring plural 'bear'." },
+  { question: "Most of her friends who ___ to travel ___ at home.", options: ["love / are", "loves / is", "love / is", "loves / are"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Friends' is plural, requiring plural 'love' and 'are'." },
+  { question: "Half of the cookies that ___ chocolate chips ___ delicious.", options: ["contain / are", "contains / is", "contain / is", "contains / are"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Cookies' is plural, requiring plural 'contain' and 'are'." },
+  { question: "Most of the data ___ accurate.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Data' (mass) requires singular 'is'." },
+  { question: "Half of the trousers ___ been mended.", options: ["have", "has", "is", "was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Trousers' is plural, requiring plural 'have'." },
+  { question: "A lot of the information ___ gathered yesterday. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Information' is uncountable, requiring singular 'was'." },
+  { question: "Three-fourths of the cities ___ ruined. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: Fraction of plural 'cities' requires plural 'were'." },
+  { question: "One-third of the city ___ unemployed.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: Fraction of singular 'city' requires singular 'is'." },
+  { question: "All of the jewellery ___ stolen. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Jewellery' is uncountable, requiring singular 'was'." },
+  { question: "Most of the research that ___ conducted ___ conclusive.", options: ["was / was", "were / were", "were / was", "was / were"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Research' is uncountable, requiring singular verbs." },
+  { question: "Half of the staff ___ at the meeting now (acting as individuals).", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Staff' (individuals) requires plural 'are'." },
+  { question: "None of the luggage ___ checked in yet.", options: ["has been", "have been", "are", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Luggage' is uncountable, requiring singular 'has been'." },
+  { question: "All of the milk and cheese ___ required for the recipe.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: Mass nouns act as a single unit concept." },
+  { question: "Most of the committee ___ decided on the proposal (acting as a unit).", options: ["has", "have", "are", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Committee' (unit) requires singular 'has'." },
+  { question: "None of the teachers who ___ trained ___ available now.", options: ["are / are", "is / is", "is / are", "are / is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Teachers' is plural, requiring plural 'are' in both cases." },
+  { question: "Half of the profits that ___ earned ___ reinvested. (Past Tense)", options: ["were / were", "was / was", "were / was", "was / were"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Profits' is plural, requiring plural 'were'." },
+  { question: "Part of the water that ___ collected ___ potable. (Past Tense)", options: ["was / was", "were / were", "was / were", "were / was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Water' is uncountable, requiring singular 'was'." },
+  { question: "A lot of the students who ___ registered ___ from abroad.", options: ["are / are", "is / is", "are / is", "is / are"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Students' is plural, requiring plural 'are'." },
+  { question: "Much of the music ___ unbearable. (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Music' is uncountable, requiring singular 'was'." },
+  { question: "All of the items that ___ been ordered ___ delivered.", options: ["have / have", "has / has", "has / have", "have / has"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Items' is plural, requiring plural 'have'." },
+  { question: "None of the equipment ___ working.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Equipment' is uncountable, requiring singular 'is'." },
+  { question: "Half of the resources that ___ allocated ___ sufficient. (Past Tense)", options: ["were / were", "was / was", "were / was", "was / were"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Resources' is plural, requiring plural 'were'." },
+  { question: "Most of the data supporting the hypothesis ___ sound.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Data' (mass) requires singular 'is'." },
+  { question: "All of the documents, except one, ___ finalized. (Past Tense)", options: ["were", "was", "is", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Documents' is plural, requiring plural 'were'." },
+  { question: "None of the arguments ___ worth considering.", options: ["are", "is", "was", "has been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Arguments' is plural, requiring plural 'are'." },
+  { question: "A lot of the time we spend on revision ___ necessary.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Time' is uncountable, requiring singular 'is'." },
+  { question: "Part of the research team ___ delayed (team as unit). (Past Tense)", options: ["was", "were", "are", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Team' (unit) is singular, requiring singular 'was'." },
+  { question: "Much of the effort that ___ expended ___ wasted. (Past Tense)", options: ["was / was", "were / were", "was / were", "were / was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Effort' is uncountable, requiring singular 'was'." },
+  { question: "All of the advice that ___ given ___ useful. (Past Tense)", options: ["was / was", "were / were", "was / were", "were / was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Advice' is uncountable, requiring singular 'was'." },
+  { question: "None of the teachers who ___ trained ___ available now.", options: ["are / are", "is / is", "is / are", "are / is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Teachers' is plural, requiring plural 'are'." },
+  { question: "Half of the profits that ___ earned ___ reinvested. (Past Tense)", options: ["were / were", "was / was", "were / was", "was / were"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Profits' is plural, requiring plural 'were'." },
+  { question: "Most of the furniture that ___ bought ___ antique. (Past Tense)", options: ["was / was", "were / were", "was / were", "were / was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Furniture' is uncountable, requiring singular 'was'." },
+  { question: "None of the trousers ___ fit me.", options: ["do", "does", "has", "have"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Trousers' is plural, requiring plural 'do'." },
+  { question: "A lot of the money that ___ collected ___ gone. (Past Tense)", options: ["was / was", "were / were", "was / were", "were / was"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Money' is uncountable, requiring singular 'was'." },
+  { question: "Much of the effort ___ lost to friction.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Effort' is uncountable, requiring singular 'is'." },
+  { question: "All of the milk ___ spilled. (Present Perfect)", options: ["has", "have", "are", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Milk' is uncountable, requiring singular 'has'." },
+  { question: "Half of the countries in the world ___ been visited by the explorer.", options: ["have", "has", "are", "is"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Countries' is plural, requiring plural 'have'." },
+  { question: "None of the equipment ___ working correctly.", options: ["is", "are", "were", "have been"], correct: 0, difficulty: "hard", explanation: "Rule 11: 'Equipment' is uncountable, requiring singular 'is'." }
 ];
