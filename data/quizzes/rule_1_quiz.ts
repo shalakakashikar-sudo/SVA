@@ -1,4 +1,4 @@
-import type { QuizQuestion } from '../../types';
+import type { QuizQuestion } from '../../types.ts';
 
 export const rule1Quiz: QuizQuestion[] = [
   // A. Easy Level
